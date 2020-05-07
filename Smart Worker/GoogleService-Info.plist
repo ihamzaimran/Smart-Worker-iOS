@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>582134492584-tg1i5kbm3fo0oddetfrping3dck3d1g5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.582134492584-tg1i5kbm3fo0oddetfrping3dck3d1g5</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>582134492584-qcss13knjbtgs7urdo5cutet4jlloaji.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyATkhPCJ1DulyZGtjSBsgL7mZwGP0OhCX4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>582134492584</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mon.hamzaimran.Smart-Worker</string>
+	<key>PROJECT_ID</key>
+	<string>smartuser-590cb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smartuser-590cb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:582134492584:ios:8f2f37dd59543cc5e0819d</string>
+	<key>DATABASE_URL</key>
+	<string>https://smartuser-590cb.firebaseio.com</string>
+</dict>
+</plist>

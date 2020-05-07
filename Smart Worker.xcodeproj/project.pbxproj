@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81C20C34246470AD000AA283 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 81C20C33246470AD000AA283 /* style.json */; };
+		81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */; };
+		81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */; };
+		81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */; };
+		81E5BA7A2460950900F71FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5BA792460950900F71FDB /* AppDelegate.swift */; };
+		81E5BA7C2460950900F71FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5BA7B2460950900F71FDB /* SceneDelegate.swift */; };
+		81E5BA7E2460950900F71FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5BA7D2460950900F71FDB /* ViewController.swift */; };
+		81E5BA812460950900F71FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA7F2460950900F71FDB /* Main.storyboard */; };
+		81E5BA832460950D00F71FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA822460950D00F71FDB /* Assets.xcassets */; };
+		81E5BA862460950D00F71FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA842460950D00F71FDB /* LaunchScreen.storyboard */; };
+		81E5BA8E2460979900F71FDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA8D2460979800F71FDB /* GoogleService-Info.plist */; };
+		81EEF5992461F060003952B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EEF5982461F060003952B0 /* MainViewController.swift */; };
+		C3BC87291F3778B59742631B /* Pods_Smart_Worker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Worker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4E24AA6C335CA256C7FEEE /* Pods-Smart Worker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Worker.release.xcconfig"; path = "Target Support Files/Pods-Smart Worker/Pods-Smart Worker.release.xcconfig"; sourceTree = "<group>"; };
+		81C20C33246470AD000AA283 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = style.json; path = "Smart Worker/View/style.json"; sourceTree = SOURCE_ROOT; };
+		81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = SOURCE_ROOT; };
+		81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		81E5BA762460950900F71FDB /* Smart Worker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Worker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E5BA792460950900F71FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81E5BA7B2460950900F71FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		81E5BA7D2460950900F71FDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81E5BA802460950900F71FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81E5BA822460950D00F71FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81E5BA852460950D00F71FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81E5BA872460950D00F71FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E5BA8D2460979800F71FDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81EEF5982461F060003952B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AC6C4506DD9A9BED88BD45C3 /* Pods-Smart Worker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Worker.debug.xcconfig"; path = "Target Support Files/Pods-Smart Worker/Pods-Smart Worker.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81E5BA732460950900F71FDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BC87291F3778B59742631B /* Pods_Smart_Worker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5802C7E9426F44724E4ECE8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81CFF0112463346F00DADF3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81C20C33246470AD000AA283 /* style.json */,
+				81E5BA7F2460950900F71FDB /* Main.storyboard */,
+				81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */,
+				81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81CFF0122463348A00DADF3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81E5BA7D2460950900F71FDB /* ViewController.swift */,
+				81EEF5982461F060003952B0 /* MainViewController.swift */,
+				81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81E5BA6D2460950900F71FDB = {
+			isa = PBXGroup;
+			children = (
+				81E5BA782460950900F71FDB /* Smart Worker */,
+				81E5BA772460950900F71FDB /* Products */,
+				B824D21D493E8A774D0E36D5 /* Pods */,
+				5802C7E9426F44724E4ECE8F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		81E5BA772460950900F71FDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81E5BA762460950900F71FDB /* Smart Worker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81E5BA782460950900F71FDB /* Smart Worker */ = {
+			isa = PBXGroup;
+			children = (
+				81E5BA792460950900F71FDB /* AppDelegate.swift */,
+				81E5BA7B2460950900F71FDB /* SceneDelegate.swift */,
+				81CFF0122463348A00DADF3B /* Controller */,
+				81CFF0112463346F00DADF3B /* View */,
+				81E5BA822460950D00F71FDB /* Assets.xcassets */,
+				81E5BA842460950D00F71FDB /* LaunchScreen.storyboard */,
+				81E5BA872460950D00F71FDB /* Info.plist */,
+				81E5BA8D2460979800F71FDB /* GoogleService-Info.plist */,
+			);
+			path = "Smart Worker";
+			sourceTree = "<group>";
+		};
+		B824D21D493E8A774D0E36D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC6C4506DD9A9BED88BD45C3 /* Pods-Smart Worker.debug.xcconfig */,
+				1B4E24AA6C335CA256C7FEEE /* Pods-Smart Worker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81E5BA752460950900F71FDB /* Smart Worker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E5BA8A2460950D00F71FDB /* Build configuration list for PBXNativeTarget "Smart Worker" */;
+			buildPhases = (
+				C65BF49176BB83FB3152217D /* [CP] Check Pods Manifest.lock */,
+				81E5BA722460950900F71FDB /* Sources */,
+				81E5BA732460950900F71FDB /* Frameworks */,
+				81E5BA742460950900F71FDB /* Resources */,
+				870A0F81BDE56F364A63B7CF /* [CP] Embed Pods Frameworks */,
+				DAD2B0210F3B9C8D4DEB3967 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smart Worker";
+			packageProductDependencies = (
+			);
+			productName = "Smart Worker";
+			productReference = 81E5BA762460950900F71FDB /* Smart Worker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81E5BA6E2460950900F71FDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Hamza Imran";
+				TargetAttributes = {
+					81E5BA752460950900F71FDB = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 81E5BA712460950900F71FDB /* Build configuration list for PBXProject "Smart Worker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81E5BA6D2460950900F71FDB;
+			packageReferences = (
+			);
+			productRefGroup = 81E5BA772460950900F71FDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81E5BA752460950900F71FDB /* Smart Worker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81E5BA742460950900F71FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E5BA862460950D00F71FDB /* LaunchScreen.storyboard in Resources */,
+				81E5BA8E2460979900F71FDB /* GoogleService-Info.plist in Resources */,
+				81E5BA832460950D00F71FDB /* Assets.xcassets in Resources */,
+				81C20C34246470AD000AA283 /* style.json in Resources */,
+				81E5BA812460950900F71FDB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		870A0F81BDE56F364A63B7CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Worker/Pods-Smart Worker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Worker/Pods-Smart Worker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Worker/Pods-Smart Worker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C65BF49176BB83FB3152217D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Worker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD2B0210F3B9C8D4DEB3967 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Worker/Pods-Smart Worker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Worker/Pods-Smart Worker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Worker/Pods-Smart Worker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81E5BA722460950900F71FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E5BA7E2460950900F71FDB /* ViewController.swift in Sources */,
+				81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */,
+				81E5BA7A2460950900F71FDB /* AppDelegate.swift in Sources */,
+				81E5BA7C2460950900F71FDB /* SceneDelegate.swift in Sources */,
+				81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */,
+				81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */,
+				81EEF5992461F060003952B0 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		81E5BA7F2460950900F71FDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81E5BA802460950900F71FDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		81E5BA842460950D00F71FDB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81E5BA852460950D00F71FDB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81E5BA882460950D00F71FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81E5BA892460950D00F71FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81E5BA8B2460950D00F71FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC6C4506DD9A9BED88BD45C3 /* Pods-Smart Worker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQ9BDQ9M2J;
+				INFOPLIST_FILE = "Smart Worker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mon.hamzaimran.Smart-Worker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81E5BA8C2460950D00F71FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4E24AA6C335CA256C7FEEE /* Pods-Smart Worker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQ9BDQ9M2J;
+				INFOPLIST_FILE = "Smart Worker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mon.hamzaimran.Smart-Worker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81E5BA712460950900F71FDB /* Build configuration list for PBXProject "Smart Worker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E5BA882460950D00F71FDB /* Debug */,
+				81E5BA892460950D00F71FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81E5BA8A2460950D00F71FDB /* Build configuration list for PBXNativeTarget "Smart Worker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E5BA8B2460950D00F71FDB /* Debug */,
+				81E5BA8C2460950D00F71FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81E5BA6E2460950900F71FDB /* Project object */;
+}
