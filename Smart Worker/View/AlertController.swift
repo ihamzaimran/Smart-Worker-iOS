@@ -6,4 +6,23 @@
 //  Copyright © 2020 Hamza Imran. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+extension UIViewController {
+    
+    
+    func showAlert(title: String, messsage: String){
+        
+        let alert = UIAlertController(title: title , message: messsage, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (acttion) in
+            DispatchQueue.main.async {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+}

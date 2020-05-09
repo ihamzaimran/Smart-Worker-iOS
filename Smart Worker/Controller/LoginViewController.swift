@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: "loginToMain", sender: self)
+        }
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -31,6 +36,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -90,7 +96,7 @@ class ViewController: UIViewController {
 //MARK:- TextFieldDelegateExtension to handle keyboard dismissal
 
 
-extension ViewController:UITextFieldDelegate {
+extension LoginViewController:UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if emailTextField.isFirstResponder {
             DispatchQueue.main.async {

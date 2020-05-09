@@ -8,84 +8,139 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
 
-
-class MainViewController: UIViewController {
+class MainViewController: UIViewController{
+    
+    @IBOutlet weak var mapView: GMSMapView!
+    
+    @IBOutlet var mainMenuBtn: UIBarButtonItem!
+    
+    @IBOutlet weak var switchBtnLabel: UISwitch!
     
     private let locationManager = CLLocationManager()
-    private var mapView: GMSMapView!
-    private var camera: GMSCameraPosition!
-    private var lat = -33.86
-    private var lng = 151.20
+    
+    private var zoomLevel: Float = 15.0
+    
+    private var ref: DatabaseReference!
+    
+    private let userID = Auth.auth().currentUser
+    
+    private var skill: String!
+    private var status: String!
+    
     
     // Set the status bar style to complement night-mode.
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.isNavigationBarHidden = false
-    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
+        
+        //hiding the main menu if the user is not verified by the admin
+        self.navigationItem.leftBarButtonItem = nil
+        switchBtnLabel.isHidden = true
+        
+        checkLocationServices()
+        
+        
+        if let user = userID {
+            let uid = user.uid
+            ref = Database.database().reference().child("Users").child("Handyman").child(uid)
+        }
+        
+        getUserData()
+    }
+    
+    
+    func getUserData() {
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            if let data = snapshot.value as? [String: Any] {
+                
+                let sk = data["Skill"]
+                let stat = data["Status"]
+                
+                self.showMainBtn(sk: sk , stat: stat)
+                
+            }
+        }
+    }
+    
+    
+    
+    
+    func setupLocationManager() {
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
     
-
+    
+    // checking if the location services are on or not at mobile level
+    func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
             
-            locationManager.requestLocation()
-            mapView.isMyLocationEnabled = true
-            mapView.settings.myLocationButton = true
         } else {
+            showAlert(title: "Important", messsage: "Please turn on your location services")
+        }
+    }
+    
+    
+    //checking if the user has given our app permission to use location or not
+    func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            print("Location Status is OK")
+        case .denied:
+            showAlert(title: "Important", messsage: "Please give access to location so you can get requests for work!")
+        case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            showAlert(title: "Important", messsage: "Please turn on location for this Smart Worker!")
+            break
+        case .authorizedAlways:
+            break
+        @unknown default:
+            fatalError()
         }
+    }
+    
+    
+    
+    func showMainBtn(sk: Any?, stat: Any?) {
         
-    }
-    
-    
-}
-
-//MARK:- Location Manager Delegate mehtods
-
-
-extension MainViewController: CLLocationManagerDelegate {
-
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        guard status == .authorizedWhenInUse else {
-            return
-        }
-
-        locationManager.startUpdatingLocation()
-
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-    }
-
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            locationManager.stopUpdatingLocation()
-             lat = location.coordinate.latitude
-             lng = location.coordinate.longitude
+        if let skil = sk as? String, let stats = stat as? String {
+            skill = skil
+            status = stats
+            
+            self.navigationItem.leftBarButtonItem = self.mainMenuBtn
+            self.switchBtnLabel.isHidden = false
         } else {
-            return
+            showAlert(title: "Important", messsage: "Once your request is approved by admin, you can start using our services. Thank you!")
         }
-
-        camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 14.0)
-        //mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.animate(to: camera)
+    }
+    
+    @IBAction func switchBtnPressed(_ sender: UISwitch) {
         
+        if switchBtnLabel.isOn {
+            locationManager.startUpdatingLocation()
+        } else {
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    
+    
+    
+    
+    func showLocation(_ latitude: CLLocationDegrees, _ longitude: CLLocationDegrees){
+        
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: zoomLevel)
         
         do {
             // Set the map style by passing the URL of the local file.
@@ -98,11 +153,82 @@ extension MainViewController: CLLocationManagerDelegate {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
         
-        self.view = mapView
+        
+        mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
+        mapView.animate(to: camera)
     }
+    
 
+    
+    @IBAction func mainMenuBtnPressed(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    
+    
+    @IBAction func logOutBtnPressed(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "Log out" , message: "Are you sure you want to Log out?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (acttion) in
+            DispatchQueue.main.async {
+                self.locationManager.stopUpdatingLocation()
+                self.logOut()
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (acttion) in
+            DispatchQueue.main.async {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    
+    
+    
+    func logOut() {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            
+            try firebaseAuth.signOut()
+            navigationController?.popToRootViewController(animated: true)
+            
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+}
+
+//MARK:- Location Manager Delegate mehtods
+
+
+extension MainViewController: CLLocationManagerDelegate {
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        checkLocationAuthorization()
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.last {
+            let lat = location.coordinate.latitude
+            let long = location.coordinate.longitude
+            showLocation(lat, long)
+            //showMarker(lat, long)
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error getting location.")
+        locationManager.stopUpdatingLocation()
+        print("Error \(error)")
     }
 }
 

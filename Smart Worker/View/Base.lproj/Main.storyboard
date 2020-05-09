@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="login">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -230,7 +230,7 @@
             </objects>
             <point key="canvasLocation" x="2136.8000000000002" y="152.47376311844079"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Home-->
         <scene sceneID="r3l-CF-ylq">
             <objects>
                 <viewController id="6Ju-vX-SAr" customClass="MainViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,17 +242,43 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hFv-T6-2U7">
+                                <rect key="frame" x="316" y="84" width="51" height="31"/>
+                                <color key="onTintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="switchBtnPressed:" destination="6Ju-vX-SAr" eventType="valueChanged" id="Wns-cP-bDx"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="DWH-om-Ud1" firstAttribute="leading" secondItem="IVC-ND-oB4" secondAttribute="leading" id="3V2-jh-zNY"/>
                             <constraint firstItem="DWH-om-Ud1" firstAttribute="trailing" secondItem="IVC-ND-oB4" secondAttribute="trailing" id="Fjm-YD-OBY"/>
                             <constraint firstItem="DWH-om-Ud1" firstAttribute="top" secondItem="IVC-ND-oB4" secondAttribute="top" id="GgM-Hk-CP4"/>
+                            <constraint firstItem="IVC-ND-oB4" firstAttribute="trailing" secondItem="hFv-T6-2U7" secondAttribute="trailing" constant="10" id="K9P-ci-r9x"/>
                             <constraint firstItem="DWH-om-Ud1" firstAttribute="bottom" secondItem="IVC-ND-oB4" secondAttribute="bottom" id="NJc-db-b5Q"/>
+                            <constraint firstItem="hFv-T6-2U7" firstAttribute="top" secondItem="IVC-ND-oB4" secondAttribute="top" constant="40" id="aD7-RN-7kE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVC-ND-oB4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="orq-9G-XsC"/>
+                    <navigationItem key="navigationItem" title="Home" id="orq-9G-XsC">
+                        <barButtonItem key="leftBarButtonItem" title="Main Menu" id="yZr-kk-x9P">
+                            <connections>
+                                <action selector="mainMenuBtnPressed:" destination="6Ju-vX-SAr" id="rM4-ny-zjs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="power" catalog="system" id="4vB-Cg-ri2">
+                            <connections>
+                                <action selector="logOutBtnPressed:" destination="6Ju-vX-SAr" id="M7i-8h-Wd4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainMenuBtn" destination="yZr-kk-x9P" id="chd-ND-KcZ"/>
+                        <outlet property="mapView" destination="DWH-om-Ud1" id="f33-Ks-Aez"/>
+                        <outlet property="switchBtnLabel" destination="hFv-T6-2U7" id="HCI-LE-ood"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkX-QD-S0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,5 +310,6 @@
     </scenes>
     <resources>
         <image name="appLogo" width="256" height="256"/>
+        <image name="power" catalog="system" width="128" height="124"/>
     </resources>
 </document>
