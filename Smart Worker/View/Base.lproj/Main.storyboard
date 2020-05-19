@@ -265,7 +265,7 @@
                     <navigationItem key="navigationItem" title="Home" id="orq-9G-XsC">
                         <barButtonItem key="leftBarButtonItem" title="Main Menu" id="yZr-kk-x9P">
                             <connections>
-                                <action selector="mainMenuBtnPressed:" destination="6Ju-vX-SAr" id="rM4-ny-zjs"/>
+                                <segue destination="Bpn-wz-SqQ" kind="show" id="f7U-xq-7RH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="power" catalog="system" id="4vB-Cg-ri2">
@@ -275,7 +275,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mainMenuBtn" destination="yZr-kk-x9P" id="chd-ND-KcZ"/>
+                        <outlet property="mainMenuBtn" destination="yZr-kk-x9P" id="b7Q-Xa-PGW"/>
                         <outlet property="mapView" destination="DWH-om-Ud1" id="f33-Ks-Aez"/>
                         <outlet property="switchBtnLabel" destination="hFv-T6-2U7" id="HCI-LE-ood"/>
                     </connections>
@@ -283,6 +283,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkX-QD-S0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852" y="-785.75712143928047"/>
+        </scene>
+        <!--Main Menu-->
+        <scene sceneID="CkJ-Yz-xCa">
+            <objects>
+                <viewController id="Bpn-wz-SqQ" customClass="MainMenuViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jPc-OK-wKl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kWW-WY-OKo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="5G9-dp-6Xo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3K1-dU-uaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861.5999999999999" y="-1050.224887556222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fcF-DV-Vcu">
