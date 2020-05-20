@@ -284,19 +284,78 @@
             </objects>
             <point key="canvasLocation" x="852" y="-785.75712143928047"/>
         </scene>
-        <!--Main Menu-->
+        <!--Complaint-->
         <scene sceneID="CkJ-Yz-xCa">
             <objects>
-                <viewController id="Bpn-wz-SqQ" customClass="MainMenuViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bpn-wz-SqQ" customClass="ComplaintViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jPc-OK-wKl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Complaint" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ct2-72-Lhl">
+                                <rect key="frame" x="86" y="62" width="203" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WAm-Pm-jsu">
+                                <rect key="frame" x="16" y="94" width="343" height="268"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="s38-5k-Xgr"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGJ-ym-uqN">
+                                <rect key="frame" x="16" y="370" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1dT-bg-jL6"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendBtnPressed:" destination="Bpn-wz-SqQ" eventType="touchUpInside" id="lTU-k4-51H"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WAm-Pm-jsu" firstAttribute="top" secondItem="ct2-72-Lhl" secondAttribute="bottom" constant="8" id="0Nm-Ie-lgX"/>
+                            <constraint firstItem="WAm-Pm-jsu" firstAttribute="leading" secondItem="kWW-WY-OKo" secondAttribute="leading" constant="16" id="6q5-pQ-aGy"/>
+                            <constraint firstItem="kWW-WY-OKo" firstAttribute="trailing" secondItem="WAm-Pm-jsu" secondAttribute="trailing" constant="16" id="98c-zT-knz"/>
+                            <constraint firstItem="ct2-72-Lhl" firstAttribute="leading" secondItem="kWW-WY-OKo" secondAttribute="leading" constant="86" id="Yxt-bW-Tld"/>
+                            <constraint firstItem="ct2-72-Lhl" firstAttribute="top" secondItem="kWW-WY-OKo" secondAttribute="top" constant="18" id="a4B-1g-UVM"/>
+                            <constraint firstItem="TGJ-ym-uqN" firstAttribute="top" secondItem="WAm-Pm-jsu" secondAttribute="bottom" constant="8" id="fCN-Ls-PFc"/>
+                            <constraint firstItem="kWW-WY-OKo" firstAttribute="trailing" secondItem="TGJ-ym-uqN" secondAttribute="trailing" constant="16" id="nHS-WM-D02"/>
+                            <constraint firstItem="TGJ-ym-uqN" firstAttribute="leading" secondItem="kWW-WY-OKo" secondAttribute="leading" constant="16" id="x3g-hH-2Wi"/>
+                            <constraint firstItem="kWW-WY-OKo" firstAttribute="trailing" secondItem="ct2-72-Lhl" secondAttribute="trailing" constant="86" id="xti-1C-JAO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kWW-WY-OKo"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1H5-5y-Dx9" appends="YES" id="Pq0-Ue-7qm"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Main Menu" id="5G9-dp-6Xo"/>
+                    <navigationItem key="navigationItem" title="Complaint" id="5G9-dp-6Xo"/>
+                    <connections>
+                        <outlet property="complaintText" destination="WAm-Pm-jsu" id="LCZ-b6-rQ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3K1-dU-uaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1H5-5y-Dx9">
+                    <connections>
+                        <action selector="shouldKeyboardDismiss:" destination="Bpn-wz-SqQ" id="aPp-QC-DEd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="-1050.224887556222"/>
         </scene>

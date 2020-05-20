@@ -1,5 +1,4 @@
 PODS:
-  - CLTypingLabel (0.4.0)
   - Firebase/Auth (6.23.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.5.2)
@@ -31,6 +30,8 @@ PODS:
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.0)
     - leveldb-library (~> 1.22)
+  - GeoFire (4.0.1):
+    - Firebase/Database (~> 6.0)
   - GoogleDataTransport (6.0.0)
   - GoogleDataTransportCCTSupport (3.0.0):
     - GoogleDataTransport (~> 6.0)
@@ -67,15 +68,14 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - CLTypingLabel (~> 0.4.0)
   - Firebase/Auth
   - Firebase/Database
+  - GeoFire (~> 4.0)
   - GoogleMaps
   - GooglePlaces
 
 SPEC REPOS:
   trunk:
-    - CLTypingLabel
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -83,6 +83,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseDatabase
+    - GeoFire
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleMaps
@@ -94,7 +95,6 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
-  CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
   Firebase: 585ae467b3edda6a5444e788fda6888f024d8d6f
   FirebaseAuth: e50319ecc114acf93c2b9581e15d6604ddd7eeb2
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
@@ -102,6 +102,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: b59c024493a409f8aecba02c99928d0d8431d159
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseDatabase: cbf2b9efe39b3f113616a2f1f140839f49d797e0
+  GeoFire: 67b5276c561434b4e4c7ea567c2c4d64e711339c
   GoogleDataTransport: 061fe7d9b476710e3cd8ea51e8e07d8b67c2b420
   GoogleDataTransportCCTSupport: 0f39025e8cf51f168711bd3fb773938d7e62ddb5
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
@@ -112,6 +113,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 4ec8127b80be0478d6fa9e516269c8350fe578cc
+PODFILE CHECKSUM: 9bb84e303395929be2546d99ac0bcaec6828fc2f
 
 COCOAPODS: 1.9.1

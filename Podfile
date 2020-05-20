@@ -11,6 +11,7 @@ target 'Smart Worker' do
   pod 'Firebase/Auth'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'GeoFire', '~> 4.0'
 
 
 end

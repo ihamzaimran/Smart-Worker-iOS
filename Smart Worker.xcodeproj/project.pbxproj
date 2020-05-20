@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8154C7E124743FB5008ADEEE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154C7E024743FB5008ADEEE /* UserData.swift */; };
 		81C20C34246470AD000AA283 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 81C20C33246470AD000AA283 /* style.json */; };
 		81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */; };
 		81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */; };
@@ -18,6 +19,7 @@
 		81E5BA832460950D00F71FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA822460950D00F71FDB /* Assets.xcassets */; };
 		81E5BA862460950D00F71FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA842460950D00F71FDB /* LaunchScreen.storyboard */; };
 		81E5BA8E2460979900F71FDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81E5BA8D2460979800F71FDB /* GoogleService-Info.plist */; };
+		81EA7C892467236C00DF57C0 /* ComplaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA7C882467236C00DF57C0 /* ComplaintViewController.swift */; };
 		81EEF5992461F060003952B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EEF5982461F060003952B0 /* MainViewController.swift */; };
 		81F2426B2465CF1C00958524 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2426A2465CF1B00958524 /* AlertController.swift */; };
 		C3BC87291F3778B59742631B /* Pods_Smart_Worker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */; };
@@ -26,6 +28,7 @@
 /* Begin PBXFileReference section */
 		1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Worker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4E24AA6C335CA256C7FEEE /* Pods-Smart Worker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Worker.release.xcconfig"; path = "Target Support Files/Pods-Smart Worker/Pods-Smart Worker.release.xcconfig"; sourceTree = "<group>"; };
+		8154C7E024743FB5008ADEEE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		81C20C33246470AD000AA283 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = style.json; path = "Smart Worker/View/style.json"; sourceTree = SOURCE_ROOT; };
 		81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = SOURCE_ROOT; };
@@ -39,6 +42,7 @@
 		81E5BA852460950D00F71FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E5BA872460950D00F71FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E5BA8D2460979800F71FDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81EA7C882467236C00DF57C0 /* ComplaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintViewController.swift; sourceTree = "<group>"; };
 		81EEF5982461F060003952B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		81F2426A2465CF1B00958524 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		AC6C4506DD9A9BED88BD45C3 /* Pods-Smart Worker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Worker.debug.xcconfig"; path = "Target Support Files/Pods-Smart Worker/Pods-Smart Worker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +68,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8154C7E224743FBC008ADEEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8154C7E024743FB5008ADEEE /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		81CFF0112463346F00DADF3B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 			children = (
 				81E5BA7D2460950900F71FDB /* LoginViewController.swift */,
 				81EEF5982461F060003952B0 /* MainViewController.swift */,
+				81EA7C882467236C00DF57C0 /* ComplaintViewController.swift */,
 				81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
@@ -109,8 +122,9 @@
 			children = (
 				81E5BA792460950900F71FDB /* AppDelegate.swift */,
 				81E5BA7B2460950900F71FDB /* SceneDelegate.swift */,
-				81CFF0122463348A00DADF3B /* Controller */,
+				8154C7E224743FBC008ADEEE /* Model */,
 				81CFF0112463346F00DADF3B /* View */,
+				81CFF0122463348A00DADF3B /* Controller */,
 				81E5BA822460950D00F71FDB /* Assets.xcassets */,
 				81E5BA842460950D00F71FDB /* LaunchScreen.storyboard */,
 				81E5BA872460950D00F71FDB /* Info.plist */,
@@ -267,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EA7C892467236C00DF57C0 /* ComplaintViewController.swift in Sources */,
 				81E5BA7E2460950900F71FDB /* LoginViewController.swift in Sources */,
 				81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */,
 				81E5BA7A2460950900F71FDB /* AppDelegate.swift in Sources */,
@@ -274,6 +289,7 @@
 				81F2426B2465CF1C00958524 /* AlertController.swift in Sources */,
 				81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */,
 				81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */,
+				8154C7E124743FB5008ADEEE /* UserData.swift in Sources */,
 				81EEF5992461F060003952B0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

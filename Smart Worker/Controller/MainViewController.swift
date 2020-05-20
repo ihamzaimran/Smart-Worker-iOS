@@ -9,10 +9,12 @@
 import UIKit
 import GoogleMaps
 import Firebase
+import GeoFire
 
 class MainViewController: UIViewController{
     
     @IBOutlet weak var mapView: GMSMapView!
+    
     
     @IBOutlet var mainMenuBtn: UIBarButtonItem!
     
@@ -25,6 +27,8 @@ class MainViewController: UIViewController{
     private var ref: DatabaseReference!
     
     private let userID = Auth.auth().currentUser
+    
+    
     
     private var skill: String!
     private var status: String!
@@ -41,7 +45,9 @@ class MainViewController: UIViewController{
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-        
+        DispatchQueue.main.async {
+            self.showSpinner()
+        }
         //hiding the main menu if the user is not verified by the admin
         self.navigationItem.leftBarButtonItem = nil
         switchBtnLabel.isHidden = true
@@ -116,12 +122,19 @@ class MainViewController: UIViewController{
     func showMainBtn(sk: Any?, stat: Any?) {
         
         if let skil = sk as? String, let stats = stat as? String {
-            skill = skil
+            skill = skil  + String("Available")
             status = stats
             
             self.navigationItem.leftBarButtonItem = self.mainMenuBtn
             self.switchBtnLabel.isHidden = false
+            DispatchQueue.main.async {
+                self.removeSpinner()
+            }
+            
         } else {
+            DispatchQueue.main.async {
+                self.removeSpinner()
+            }
             showAlert(title: "Important", messsage: "Once your request is approved by admin, you can start using our services. Thank you!")
         }
     }
@@ -132,6 +145,7 @@ class MainViewController: UIViewController{
             locationManager.startUpdatingLocation()
         } else {
             locationManager.stopUpdatingLocation()
+            removeLocation()
         }
     }
     
@@ -141,6 +155,15 @@ class MainViewController: UIViewController{
     func showLocation(_ latitude: CLLocationDegrees, _ longitude: CLLocationDegrees){
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: zoomLevel)
+        
+        if let id = userID {
+            let uid = id.uid
+            let databaseref = Database.database().reference().child(skill)
+            let geoFire = GeoFire(firebaseRef: databaseref)
+            
+            geoFire.setLocation(CLLocation(latitude: latitude, longitude: longitude), forKey: uid)
+        }
+        
         
         do {
             // Set the map style by passing the URL of the local file.
@@ -159,12 +182,6 @@ class MainViewController: UIViewController{
         mapView.animate(to: camera)
     }
     
-
-    
-    @IBAction func mainMenuBtnPressed(_ sender: UIBarButtonItem) {
-        
-    }
-    
     
     
     @IBAction func logOutBtnPressed(_ sender: UIBarButtonItem) {
@@ -173,7 +190,11 @@ class MainViewController: UIViewController{
         
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (acttion) in
             DispatchQueue.main.async {
+                
                 self.locationManager.stopUpdatingLocation()
+                
+                self.removeLocation()
+                
                 self.logOut()
             }
         }))
@@ -188,6 +209,15 @@ class MainViewController: UIViewController{
     }
     
     
+    func removeLocation() {
+        if let id = self.userID {
+            let uid = id.uid
+            let databaseref = Database.database().reference().child(self.skill)
+            let geoFire = GeoFire(firebaseRef: databaseref)
+            
+            geoFire.removeKey(uid)
+        }
+    }
     
     
     func logOut() {
