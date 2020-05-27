@@ -12,19 +12,32 @@ fileprivate var aView: UIView?
 
 extension UIViewController {
     
-    func showSpinner() {
-        aView = UIView(frame: self.view.bounds)
-        aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView(style: .large)
-        ai.color = UIColor(named: "PrimaryColor")
-        ai.center = aView!.center
-        ai.startAnimating()
-        aView?.addSubview(ai)
-        self.view.addSubview(aView!)
+    func showSpinner(with Messasge: String) {
+//        aView = UIView(frame: self.view.bounds)
+//        aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+//        let ai = UIActivityIndicatorView(style: .large)
+//        ai.color = UIColor(named: "PrimaryColor")
+//        ai.center = aView!.center
+//        ai.startAnimating()
+//        aView?.addSubview(ai)
+//        self.view.addSubview(aView!)
+        
+        let alert = UIAlertController(title: nil, message: "Please Wait...", preferredStyle: .alert)
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        
+        loadingIndicator.hidesWhenStopped = true
+        
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating()
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        
     }
     
     func removeSpinner(){
-        aView?.removeFromSuperview()
-        aView = nil
+//        aView?.removeFromSuperview()
+//        aView = nil
+        dismiss(animated: true, completion: nil)
     }
 }

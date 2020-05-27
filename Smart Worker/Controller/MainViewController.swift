@@ -17,7 +17,6 @@ class MainViewController: UIViewController{
     
     
     @IBOutlet var mainMenuBtn: UIBarButtonItem!
-    
     @IBOutlet weak var switchBtnLabel: UISwitch!
     
     private let locationManager = CLLocationManager()
@@ -46,8 +45,7 @@ class MainViewController: UIViewController{
         
         navigationItem.hidesBackButton = true
         DispatchQueue.main.async {
-            self.showSpinner()
-        }
+            self.showSpinner(with: "Getting everything ready, please wait...")        }
         //hiding the main menu if the user is not verified by the admin
         self.navigationItem.leftBarButtonItem = nil
         switchBtnLabel.isHidden = true

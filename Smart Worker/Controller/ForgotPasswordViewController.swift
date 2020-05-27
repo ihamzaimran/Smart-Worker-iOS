@@ -25,7 +25,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBAction func resetBtnPressed(_ sender: UIButton) {
         
         DispatchQueue.main.async {
-            self.showSpinner()
+            self.showSpinner(with: "Sending email...")
         }
         
         if let email = forgotPasswordLabel.text{
@@ -33,31 +33,15 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
                 if let e = error {
                     DispatchQueue.main.async {
                         self.removeSpinner()
+                        self.showAlert(title: "Error", messsage: e.localizedDescription)
                     }
                     
-                    let alert = UIAlertController(title: "Error" , message: e.localizedDescription, preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (acttion) in
-                        DispatchQueue.main.async {
-                            alert.dismiss(animated: true, completion: nil)
-                        }
-                    }))
-                    
-                    self.present(alert, animated: true)
                 } else {
                     DispatchQueue.main.async {
                         self.removeSpinner()
+                        self.showAlert(title: "Forgot Password", messsage: "Email sent successfully!")
+                        self.forgotPasswordLabel.text = nil
                     }
-                    
-                    let alert = UIAlertController(title: "Error" , message: "Email sent successfully!", preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (acttion) in
-                        DispatchQueue.main.async {
-                            alert.dismiss(animated: true, completion: nil)
-                        }
-                    }))
-                    
-                    self.present(alert, animated: true)
                 }
             }
         }

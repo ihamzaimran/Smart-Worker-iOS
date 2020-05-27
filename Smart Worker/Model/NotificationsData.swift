@@ -9,6 +9,6 @@
 import Foundation
 
 
-struct Notifications {
+struct NotificationsData {
     let message: String
 }

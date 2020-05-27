@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
         DispatchQueue.main.async {
-            self.showSpinner()
+            self.showSpinner(with: "Logging in...")
         }
         if let email = emailTextField.text, let password = passwordTextField.text{
             
@@ -97,6 +97,7 @@ class LoginViewController: UIViewController {
 
 
 extension LoginViewController:UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if emailTextField.isFirstResponder {
             DispatchQueue.main.async {
@@ -110,6 +111,7 @@ extension LoginViewController:UITextFieldDelegate {
         }
         return false
     }
+    
 }
 
 

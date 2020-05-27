@@ -10,9 +10,16 @@ import UIKit
 
 class NotificatiosCell: UITableViewCell {
 
+    @IBOutlet var notificationBubble: UIView!
+    @IBOutlet weak var notiLabel: UILabel!
+    @IBOutlet weak var noiImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        notificationBubble.layer.cornerRadius = 3.0
+        //notificationBubble.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

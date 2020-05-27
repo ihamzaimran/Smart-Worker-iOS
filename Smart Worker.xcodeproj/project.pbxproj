@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8154C7E124743FB5008ADEEE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154C7E024743FB5008ADEEE /* UserData.swift */; };
+		811616B62476F09F008DC573 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811616B52476F09F008DC573 /* ProfileSettingsViewController.swift */; };
+		811616B82476F6D7008DC573 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811616B72476F6D7008DC573 /* NotificationsViewController.swift */; };
+		811616BB2476FB52008DC573 /* NotificatiosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811616B92476FB52008DC573 /* NotificatiosCell.swift */; };
+		811616BC2476FB52008DC573 /* NotificatiosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811616BA2476FB52008DC573 /* NotificatiosCell.xib */; };
+		8154C7E124743FB5008ADEEE /* NotificationsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154C7E024743FB5008ADEEE /* NotificationsData.swift */; };
 		81C20C34246470AD000AA283 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 81C20C33246470AD000AA283 /* style.json */; };
 		81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */; };
 		81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */; };
@@ -28,7 +32,11 @@
 /* Begin PBXFileReference section */
 		1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Worker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4E24AA6C335CA256C7FEEE /* Pods-Smart Worker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Worker.release.xcconfig"; path = "Target Support Files/Pods-Smart Worker/Pods-Smart Worker.release.xcconfig"; sourceTree = "<group>"; };
-		8154C7E024743FB5008ADEEE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		811616B52476F09F008DC573 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		811616B72476F6D7008DC573 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		811616B92476FB52008DC573 /* NotificatiosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificatiosCell.swift; sourceTree = "<group>"; };
+		811616BA2476FB52008DC573 /* NotificatiosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificatiosCell.xib; sourceTree = "<group>"; };
+		8154C7E024743FB5008ADEEE /* NotificationsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsData.swift; sourceTree = "<group>"; };
 		81C20C33246470AD000AA283 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = style.json; path = "Smart Worker/View/style.json"; sourceTree = SOURCE_ROOT; };
 		81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = SOURCE_ROOT; };
@@ -71,7 +79,7 @@
 		8154C7E224743FBC008ADEEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8154C7E024743FB5008ADEEE /* UserData.swift */,
+				8154C7E024743FB5008ADEEE /* NotificationsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +92,8 @@
 				81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */,
 				81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */,
 				81F2426A2465CF1B00958524 /* AlertController.swift */,
+				811616B92476FB52008DC573 /* NotificatiosCell.swift */,
+				811616BA2476FB52008DC573 /* NotificatiosCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,6 +105,8 @@
 				81EEF5982461F060003952B0 /* MainViewController.swift */,
 				81EA7C882467236C00DF57C0 /* ComplaintViewController.swift */,
 				81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */,
+				811616B52476F09F008DC573 /* ProfileSettingsViewController.swift */,
+				811616B72476F6D7008DC573 /* NotificationsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +222,7 @@
 				81E5BA862460950D00F71FDB /* LaunchScreen.storyboard in Resources */,
 				81E5BA8E2460979900F71FDB /* GoogleService-Info.plist in Resources */,
 				81E5BA832460950D00F71FDB /* Assets.xcassets in Resources */,
+				811616BC2476FB52008DC573 /* NotificatiosCell.xib in Resources */,
 				81C20C34246470AD000AA283 /* style.json in Resources */,
 				81E5BA812460950900F71FDB /* Main.storyboard in Resources */,
 			);
@@ -284,12 +297,15 @@
 				81EA7C892467236C00DF57C0 /* ComplaintViewController.swift in Sources */,
 				81E5BA7E2460950900F71FDB /* LoginViewController.swift in Sources */,
 				81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */,
+				811616B82476F6D7008DC573 /* NotificationsViewController.swift in Sources */,
 				81E5BA7A2460950900F71FDB /* AppDelegate.swift in Sources */,
 				81E5BA7C2460950900F71FDB /* SceneDelegate.swift in Sources */,
 				81F2426B2465CF1C00958524 /* AlertController.swift in Sources */,
 				81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */,
+				811616B62476F09F008DC573 /* ProfileSettingsViewController.swift in Sources */,
 				81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */,
-				8154C7E124743FB5008ADEEE /* UserData.swift in Sources */,
+				811616BB2476FB52008DC573 /* NotificatiosCell.swift in Sources */,
+				8154C7E124743FB5008ADEEE /* NotificationsData.swift in Sources */,
 				81EEF5992461F060003952B0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
