@@ -13,5 +13,6 @@ target 'Smart Worker' do
   pod 'GooglePlaces'
   pod 'GeoFire', '~> 4.0'
   pod 'Kingfisher', '~> 5.14'
+  pod 'Firebase/Storage'
 
 end

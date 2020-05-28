@@ -21,9 +21,9 @@ class NotificationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            self.showSpinner(with: "Loading Notifications...")
-        }
+//        DispatchQueue.main.async {
+//            self.showSpinner(with: "Loading Notifications...")
+//        }
         
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.white
@@ -66,7 +66,7 @@ class NotificationsViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    self.removeSpinner()
+                    //self.removeSpinner()
                 }
             }
         }

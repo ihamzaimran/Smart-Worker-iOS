@@ -22,7 +22,7 @@ extension UIViewController {
 //        aView?.addSubview(ai)
 //        self.view.addSubview(aView!)
         
-        let alert = UIAlertController(title: nil, message: "Please Wait...", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: Messasge, preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         
         loadingIndicator.hidesWhenStopped = true

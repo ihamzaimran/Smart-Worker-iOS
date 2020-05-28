@@ -11,7 +11,7 @@ import GoogleMaps
 import Firebase
 import GeoFire
 
-class MainViewController: UIViewController{
+class MainViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -27,12 +27,9 @@ class MainViewController: UIViewController{
     
     private let userID = Auth.auth().currentUser
     
-    
-    
     private var skill: String!
     private var status: String!
-    
-    
+
     // Set the status bar style to complement night-mode.
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
@@ -45,7 +42,9 @@ class MainViewController: UIViewController{
         
         navigationItem.hidesBackButton = true
         DispatchQueue.main.async {
-            self.showSpinner(with: "Getting everything ready, please wait...")        }
+            self.showSpinner(with: "Please wait...")
+            
+        }
         //hiding the main menu if the user is not verified by the admin
         self.navigationItem.leftBarButtonItem = nil
         switchBtnLabel.isHidden = true
