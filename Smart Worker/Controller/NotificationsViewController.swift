@@ -16,7 +16,7 @@ class NotificationsViewController: UIViewController {
     
     private var ref: DatabaseReference!
     
-    var notificationMessages:[NotificationsData] = []
+    private var notificationMessages:[NotificationsData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -149,16 +149,18 @@ class ProfileSettingsViewController: UIViewController{
                            "LastName": lname,
                            "Skill": skillChange]
             
-            ref.updateChildValues(changes)
-            
-            DispatchQueue.main.async {
-                self.removeSpinner()
-            }
-            
-        } else {
-            DispatchQueue.main.async {
-                self.removeSpinner()
-                self.showAlert(title: "Error", messsage: "Please enter all the information correctly")
+            ref.updateChildValues(changes) { (error, ref) in
+                if let e = error {
+                    DispatchQueue.main.async {
+                        self.removeSpinner()
+                        self.showAlert(title: "Error", messsage: e.localizedDescription)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.removeSpinner()
+                        self.showAlert(title: "Success", messsage: "Changes saved successfully")
+                    }
+                }
             }
         }
     }
@@ -174,7 +176,7 @@ class ProfileSettingsViewController: UIViewController{
         DispatchQueue.main.async {
             self.showSpinner(with: "Updating photo...")
         }
-     
+        
         guard let uiimage = image, let data = uiimage.jpegData(compressionQuality: 0.8) else {
             removeSpinner()
             showAlert(title: "Error", messsage: "Something went wrong")

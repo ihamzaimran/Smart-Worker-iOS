@@ -12,3 +12,10 @@ import Foundation
 struct NotificationsData {
     let message: String
 }
+
+struct requests {
+    let date: String
+    let time: String
+    let requestKey: String
+}
+
