@@ -652,35 +652,36 @@
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="requestCell" rowHeight="110" id="oUj-Pc-Npk" customClass="RequestCustomViewCellTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="requestCell" rowHeight="120" id="oUj-Pc-Npk" customClass="RequestCustomViewCellTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oUj-Pc-Npk" id="DP0-q1-8c2">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-dP-DRA">
-                                                    <rect key="frame" x="10" y="10" width="329" height="90"/>
+                                                    <rect key="frame" x="5" y="5" width="365" height="110"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your appointment details are" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-CU-Qcf">
-                                                            <rect key="frame" x="5" y="10" width="319" height="21.5"/>
+                                                            <rect key="frame" x="5" y="10" width="355" height="21.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z5X-kV-m6p">
-                                                            <rect key="frame" x="5" y="41.5" width="319" height="0.0"/>
+                                                            <rect key="frame" x="5" y="41.5" width="355" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xCw-dJ-hn6">
-                                                            <rect key="frame" x="5" y="51.5" width="319" height="0.0"/>
+                                                            <rect key="frame" x="5" y="51.5" width="355" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="xCw-dJ-hn6" secondAttribute="trailing" constant="5" id="0Yj-zW-7C1"/>
                                                         <constraint firstItem="c1V-CU-Qcf" firstAttribute="leading" secondItem="vGd-dP-DRA" secondAttribute="leading" constant="5" id="DfM-X9-rrf"/>
@@ -695,13 +696,13 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="vGd-dP-DRA" secondAttribute="bottom" constant="10" id="9tC-Xi-RB2"/>
-                                                <constraint firstItem="vGd-dP-DRA" firstAttribute="top" secondItem="DP0-q1-8c2" secondAttribute="top" constant="10" id="FlL-1e-mKx"/>
-                                                <constraint firstItem="vGd-dP-DRA" firstAttribute="leading" secondItem="DP0-q1-8c2" secondAttribute="leading" constant="10" id="MEE-kb-e6n"/>
-                                                <constraint firstAttribute="trailing" secondItem="vGd-dP-DRA" secondAttribute="trailing" constant="10" id="q1q-rr-W5N"/>
+                                                <constraint firstAttribute="bottom" secondItem="vGd-dP-DRA" secondAttribute="bottom" constant="5" id="9tC-Xi-RB2"/>
+                                                <constraint firstItem="vGd-dP-DRA" firstAttribute="top" secondItem="DP0-q1-8c2" secondAttribute="top" constant="5" id="FlL-1e-mKx"/>
+                                                <constraint firstItem="vGd-dP-DRA" firstAttribute="leading" secondItem="DP0-q1-8c2" secondAttribute="leading" constant="5" id="MEE-kb-e6n"/>
+                                                <constraint firstAttribute="trailing" secondItem="vGd-dP-DRA" secondAttribute="trailing" constant="5" id="q1q-rr-W5N"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="appointmentDetails" destination="c1V-CU-Qcf" id="q8Y-Mb-t9N"/>
                                             <outlet property="dateLbl" destination="Z5X-kV-m6p" id="99f-zL-VdX"/>

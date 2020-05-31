@@ -66,9 +66,19 @@ class RequestViewController: UIViewController {
             if let data = snapshot.value as? [String: Any] {
                 guard let date = data["Date"] as? String else {return}
                 guard let time = data["Time"] as? String else {return}
+                guard let duration = data["JobTimeDuration"] as? String else {return}
+                
+                guard let customerLocation = data["CustomerLocation"] as? [String: Any] else {fatalError("couldnot get location")}
+                
+                guard let latitude = customerLocation["Latitude"] as? String else {fatalError("couldnot get lat")}
+                guard let longitude = customerLocation["Longitude"] as? String else {fatalError("couldnot get long")}
+                
+                
                 let key = k
                 
-                let newRequest = requests(date: date, time: time, requestKey: key)
+                let newRequest = requests(date: date, time: time, duration: duration , requestKey: key, customerLocation: Location.init(latitude: latitude, longitude: longitude))
+                
+
                 
                 self.requestsData.append(newRequest)
                 
@@ -92,24 +102,25 @@ extension RequestViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 120
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "requestCell") as! RequestCustomViewCellTableViewCell
         
-        cell.layer.cornerRadius = 10
+        cell.requestViewCell.layer.cornerRadius = 2
+        //cell.requestViewCell.frame.height / 2
         
         let index = requestsData[indexPath.row]
         
-//        if (index.date == "" || index.time == ""){
-//            cell.appointmentDetails.text = "You have no requests yet!"
-//        } else {
-            cell.dateLbl.text = ("Date: \(index.date)")
-            cell.timeLbl.text = ("Time: \(index.time)")
-            
-//        }
+        //        if (index.date == "" || index.time == ""){
+        //            cell.appointmentDetails.text = "You have no requests yet!"
+        //        } else {
+        cell.dateLbl.text = ("Date: \(index.date)")
+        cell.timeLbl.text = ("Time: \(index.time)")
+        
+        //        }
         return cell
     }
     
@@ -122,7 +133,7 @@ extension RequestViewController: UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! RequestSingleViewController
-
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedRequest = requestsData[indexPath.row].requestKey
         }

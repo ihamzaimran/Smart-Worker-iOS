@@ -16,6 +16,12 @@ struct NotificationsData {
 struct requests {
     let date: String
     let time: String
+    let duration: String
     let requestKey: String
+    let customerLocation: Location
 }
 
+struct Location {
+    let latitude: String
+    let longitude: String
+}
