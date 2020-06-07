@@ -67,6 +67,7 @@ class RequestViewController: UIViewController {
                 guard let date = data["Date"] as? String else {return}
                 guard let time = data["Time"] as? String else {return}
                 guard let duration = data["JobTimeDuration"] as? String else {return}
+                guard let customerId = data["CustomerId"] as? String else {return}
                 
                 guard let customerLocation = data["CustomerLocation"] as? [String: Any] else {fatalError("couldnot get location")}
                 
@@ -76,7 +77,7 @@ class RequestViewController: UIViewController {
                 
                 let key = k
                 
-                let newRequest = requests(date: date, time: time, duration: duration , requestKey: key, customerLocation: Location.init(latitude: latitude, longitude: longitude))
+                let newRequest = requests(date: date, time: time, duration: duration , requestKey: key, customerId: customerId ,customerLocation: Location.init(latitude: latitude, longitude: longitude))
                 
 
                 
@@ -135,7 +136,14 @@ extension RequestViewController: UITableViewDelegate, UITableViewDataSource {
         let destinationVC = segue.destination as! RequestSingleViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedRequest = requestsData[indexPath.row].requestKey
+            let index = requestsData[indexPath.row]
+            destinationVC.selectedRequest = index.requestKey
+            destinationVC.date = index.date
+            destinationVC.time = index.time
+            destinationVC.duration = index.duration
+            destinationVC.customerId = index.customerId
+            destinationVC.latitude = index.customerLocation.latitude
+            destinationVC.longitude = index.customerLocation.longitude
         }
     }
     

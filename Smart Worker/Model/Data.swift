@@ -18,10 +18,19 @@ struct requests {
     let time: String
     let duration: String
     let requestKey: String
+    let customerId: String
     let customerLocation: Location
 }
 
 struct Location {
     let latitude: String
     let longitude: String
+}
+
+
+struct CustomerData {
+    let firstName: String
+    let lastName: String
+    let phone: String
+    let imageUrl: String
 }
