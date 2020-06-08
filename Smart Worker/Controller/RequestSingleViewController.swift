@@ -117,6 +117,33 @@ class RequestSingleViewController: UIViewController {
     
     
     @IBAction func acceptRequestBtn(_ sender: UIButton) {
+        
+        guard let userID = Auth.auth().currentUser?.uid else {return}
+        
+        let appointmentDB = Database.database().reference().child("FutureAppointments").child(selectedRequest!)
+        let handymanDB = Database.database().reference().child("Users").child("Handyman").child(userID).child("FutureAppointments")
+        let customerDB = Database.database().reference().child("Users").child("Customer").child(customerId!).child("FutureAppointments")
+        
+        
+        handymanDB.child(selectedRequest!).setValue(true)
+        customerDB.child(selectedRequest!).setValue(true)
+        
+        let data = ["HandymanId": userID, "Date": date!, "Time": time!, "JobTimeDuration": duration!, "CustomerId": customerId!, "CustomerLocation/lat": latitude!, "CustomerLocation/lng": longitude!]
+        
+        
+        appointmentDB.child(selectedRequest!).updateChildValues(data)
+        
+                                  /* do background app staff here */
+        
+        
+        let DB = Database.database().reference().child("AppointmentRequests").child(selectedRequest!)
+        let hDB = Database.database().reference().child("Users").child("Handyman").child(userID).child("RequestList").child(selectedRequest!)
+        let cDB = Database.database().reference().child("Users").child("Customer").child(customerId!).child("RequestList").child(selectedRequest!)
+        
+        
+        DB.removeValue()
+        hDB.removeValue()
+        cDB.removeValue()
     }
     
     
@@ -125,8 +152,8 @@ class RequestSingleViewController: UIViewController {
         guard let userID = Auth.auth().currentUser?.uid else {return}
         
         let appointmentDB = Database.database().reference().child("AppointmentRequests").child(selectedRequest!)
-        let handymanDB = Database.database().reference().child("Users").child("Handyman").child(userID).child(selectedRequest!)
-        let customerDB = Database.database().reference().child("Users").child("Customer").child(customerId!).child(selectedRequest!)
+        let handymanDB = Database.database().reference().child("Users").child("Handyman").child(userID).child("RequestList").child(selectedRequest!)
+        let customerDB = Database.database().reference().child("Users").child("Customer").child(customerId!).child("RequestList").child(selectedRequest!)
         
         appointmentDB.removeValue()
         handymanDB.removeValue()
