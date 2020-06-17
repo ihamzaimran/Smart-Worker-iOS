@@ -10,6 +10,10 @@ import UIKit
 
 class FutureAppointmentsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var futureAppointmentViewCell: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
