@@ -30,7 +30,7 @@ class FutureAppointmentsViewController: UIViewController {
         if let id = id {
             let userID = id.uid
             
-            ref = Database.database().reference().child("Users").child("Handyman").child(userID).child("PastAppointments")
+            ref = Database.database().reference().child("Users").child("Handyman").child(userID).child("FutureAppointments")
         }
         
     }
@@ -63,7 +63,7 @@ class FutureAppointmentsViewController: UIViewController {
     
     func showRequests(k: String) {
         
-        let ref = Database.database().reference().child("PastAppointments").child(k)
+        let ref = Database.database().reference().child("FutureAppointments").child(k)
         
         ref.observe(.value) { (snapshot) in
             

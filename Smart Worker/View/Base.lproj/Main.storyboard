@@ -503,14 +503,90 @@
                     <view key="view" contentMode="scaleToFill" id="Mu3-Xf-jDO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MC0-ik-nPc">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="presentAppointmentCells" rowHeight="120" id="pEN-nR-rec" customClass="PresentRequestTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEN-nR-rec" id="zQq-QC-7Yv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1c-A5-0lD" userLabel="Present Appointment View Cell">
+                                                    <rect key="frame" x="5" y="5" width="365" height="110"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your appointment details are" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XAL-X9-kK6">
+                                                            <rect key="frame" x="5" y="10" width="355" height="21.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="EOD-wt-KUM">
+                                                            <rect key="frame" x="5" y="41.5" width="355" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cBj-37-oUi">
+                                                            <rect key="frame" x="5" y="51.5" width="355" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="EOD-wt-KUM" firstAttribute="top" secondItem="XAL-X9-kK6" secondAttribute="bottom" constant="10" id="5RB-PD-iUo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cBj-37-oUi" secondAttribute="trailing" constant="5" id="Mcz-uc-wjE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EOD-wt-KUM" secondAttribute="trailing" constant="5" id="VFT-SM-9ZG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XAL-X9-kK6" secondAttribute="trailing" constant="5" id="WHo-mh-CeA"/>
+                                                        <constraint firstItem="cBj-37-oUi" firstAttribute="leading" secondItem="R1c-A5-0lD" secondAttribute="leading" constant="5" id="amL-8X-V4u"/>
+                                                        <constraint firstItem="EOD-wt-KUM" firstAttribute="leading" secondItem="R1c-A5-0lD" secondAttribute="leading" constant="5" id="h5r-ub-6Gn"/>
+                                                        <constraint firstItem="cBj-37-oUi" firstAttribute="top" secondItem="EOD-wt-KUM" secondAttribute="bottom" constant="10" id="sIc-CD-U7n"/>
+                                                        <constraint firstItem="XAL-X9-kK6" firstAttribute="top" secondItem="R1c-A5-0lD" secondAttribute="top" constant="10" id="vhz-he-VCw"/>
+                                                        <constraint firstItem="XAL-X9-kK6" firstAttribute="leading" secondItem="R1c-A5-0lD" secondAttribute="leading" constant="5" id="ycR-Zb-Qdm"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="R1c-A5-0lD" firstAttribute="top" secondItem="zQq-QC-7Yv" secondAttribute="top" constant="5" id="8m9-MF-lCE"/>
+                                                <constraint firstAttribute="bottom" secondItem="R1c-A5-0lD" secondAttribute="bottom" constant="5" id="jzU-Rj-Eob"/>
+                                                <constraint firstItem="R1c-A5-0lD" firstAttribute="leading" secondItem="zQq-QC-7Yv" secondAttribute="leading" constant="5" id="vtu-3N-qDp"/>
+                                                <constraint firstAttribute="trailing" secondItem="R1c-A5-0lD" secondAttribute="trailing" constant="5" id="ypU-pj-Xlg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dateLbl" destination="EOD-wt-KUM" id="bmO-94-81B"/>
+                                            <outlet property="futureAppointmentViewCell" destination="R1c-A5-0lD" id="YEK-EW-w5j"/>
+                                            <outlet property="presentViewCell" destination="R1c-A5-0lD" id="r8j-O6-6sx"/>
+                                            <outlet property="timeLbl" destination="cBj-37-oUi" id="x4M-tH-nJE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MC0-ik-nPc" firstAttribute="bottom" secondItem="Uxv-oq-2bp" secondAttribute="bottom" id="0Xc-qH-TzI"/>
+                            <constraint firstItem="MC0-ik-nPc" firstAttribute="leading" secondItem="Uxv-oq-2bp" secondAttribute="leading" id="4M4-K2-igJ"/>
+                            <constraint firstItem="MC0-ik-nPc" firstAttribute="trailing" secondItem="Uxv-oq-2bp" secondAttribute="trailing" id="R6q-FO-usR"/>
+                            <constraint firstItem="MC0-ik-nPc" firstAttribute="top" secondItem="Uxv-oq-2bp" secondAttribute="top" id="VyI-ev-x3h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Uxv-oq-2bp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Present Appointments" id="N4P-og-21l"/>
+                    <connections>
+                        <outlet property="tableView" destination="MC0-ik-nPc" id="bb9-Sr-PK0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSl-SC-HoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392" y="-912"/>
+            <point key="canvasLocation" x="2391.1999999999998" y="-912.5937031484259"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mre-3X-LWk">
