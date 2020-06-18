@@ -34,6 +34,8 @@
 		81EEF5992461F060003952B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EEF5982461F060003952B0 /* MainViewController.swift */; };
 		81F2426B2465CF1C00958524 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2426A2465CF1B00958524 /* AlertController.swift */; };
 		81F36E1124811C5C00376EB8 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F36E1024811C5B00376EB8 /* RequestViewController.swift */; };
+		81FC41F8249BB53D00B16F5D /* PastRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC41F7249BB53D00B16F5D /* PastRequestTableViewCell.swift */; };
+		81FC41FA249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC41F9249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift */; };
 		C3BC87291F3778B59742631B /* Pods_Smart_Worker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1188C622A0FB4D8AD143939B /* Pods_Smart_Worker.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		81EEF5982461F060003952B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		81F2426A2465CF1B00958524 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		81F36E1024811C5B00376EB8 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		81FC41F7249BB53D00B16F5D /* PastRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRequestTableViewCell.swift; sourceTree = "<group>"; };
+		81FC41F9249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastAppointmentSingleViewController.swift; sourceTree = "<group>"; };
 		AC6C4506DD9A9BED88BD45C3 /* Pods-Smart Worker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Worker.debug.xcconfig"; path = "Target Support Files/Pods-Smart Worker/Pods-Smart Worker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,8 @@
 				81CFB99F2497A83F0028E1AC /* FutureAppointmentsViewController.swift */,
 				81CFB9A12497AD570028E1AC /* FutureAppointmentsTableViewCell.swift */,
 				81E65B61249B40F900C43322 /* PresentRequestTableViewCell.swift */,
+				81FC41F7249BB53D00B16F5D /* PastRequestTableViewCell.swift */,
+				81FC41F9249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,12 +327,14 @@
 				81EA7C892467236C00DF57C0 /* ComplaintViewController.swift in Sources */,
 				81E5BA7E2460950900F71FDB /* LoginViewController.swift in Sources */,
 				81D852832482991B00E73B4C /* RequestSingleViewController.swift in Sources */,
+				81FC41FA249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift in Sources */,
 				81F36E1124811C5C00376EB8 /* RequestViewController.swift in Sources */,
 				81D852812482754500E73B4C /* RequestCustomViewCellTableViewCell.swift in Sources */,
 				81CFB9A22497AD570028E1AC /* FutureAppointmentsTableViewCell.swift in Sources */,
 				81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */,
 				81CFB9A02497A83F0028E1AC /* FutureAppointmentsViewController.swift in Sources */,
 				811616B82476F6D7008DC573 /* NotificationsViewController.swift in Sources */,
+				81FC41F8249BB53D00B16F5D /* PastRequestTableViewCell.swift in Sources */,
 				81E65B62249B40F900C43322 /* PresentRequestTableViewCell.swift in Sources */,
 				81E5BA7A2460950900F71FDB /* AppDelegate.swift in Sources */,
 				81E5BA7C2460950900F71FDB /* SceneDelegate.swift in Sources */,

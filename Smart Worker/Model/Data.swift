@@ -41,6 +41,18 @@ struct PresentRequests {
 //    let customerLocation: Location
 }
 
+
+struct PastAppointments {
+    let date: String
+    let time: String
+    let duration: String
+    //let workType: String
+    let appointmentKey: String
+    let bill: String
+    
+}
+
+
 struct Location {
     let latitude: String
     let longitude: String
