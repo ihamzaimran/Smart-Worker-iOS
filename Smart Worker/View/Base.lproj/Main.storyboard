@@ -383,20 +383,157 @@
             </objects>
             <point key="canvasLocation" x="132" y="81.409295352323838"/>
         </scene>
-        <!--View Controller-->
+        <!--Past Appointment Single View Controller-->
         <scene sceneID="WE3-6G-qB0">
             <objects>
-                <viewController id="AAi-tz-hkK" sceneMemberID="viewController">
+                <viewController id="AAi-tz-hkK" customClass="PastAppointmentSingleViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4BK-O9-t34">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkf-rA-3kN">
+                                <rect key="frame" x="93" y="20" width="189" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-NP-xBg">
+                                <rect key="frame" x="15" y="59" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fy-V0-5NJ">
+                                <rect key="frame" x="15" y="93" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMJ-27-skG">
+                                <rect key="frame" x="15" y="127" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-cM-iwy">
+                                <rect key="frame" x="15" y="161" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txu-2A-t1t">
+                                <rect key="frame" x="15" y="195" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handyman's Cost per Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dN-Xq-vNH">
+                                <rect key="frame" x="15" y="229" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRZ-eF-TWK">
+                                <rect key="frame" x="15" y="263" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-Jt-5Bi">
+                                <rect key="frame" x="15" y="297" width="345" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've rated: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayu-S2-4TS">
+                                <rect key="frame" x="15" y="331" width="95" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icm-gU-Dt0" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="120" y="331" width="240" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                        <color key="value" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minTouchRating">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cfp-cM-iwy" firstAttribute="top" secondItem="mMJ-27-skG" secondAttribute="bottom" constant="15" id="3SI-Mn-npC"/>
+                            <constraint firstItem="vRZ-eF-TWK" firstAttribute="top" secondItem="4dN-Xq-vNH" secondAttribute="bottom" constant="15" id="3bY-65-Vlb"/>
+                            <constraint firstItem="ayu-S2-4TS" firstAttribute="top" secondItem="WJJ-Jt-5Bi" secondAttribute="bottom" constant="15" id="3yX-8K-FYz"/>
+                            <constraint firstItem="4dN-Xq-vNH" firstAttribute="trailing" secondItem="Txu-2A-t1t" secondAttribute="trailing" id="94y-0t-Sp8"/>
+                            <constraint firstItem="5e2-n2-UvH" firstAttribute="trailing" secondItem="Icm-gU-Dt0" secondAttribute="trailing" constant="15" id="C6c-53-Lu9"/>
+                            <constraint firstItem="cfp-cM-iwy" firstAttribute="leading" secondItem="mMJ-27-skG" secondAttribute="leading" id="CSS-2x-sQf"/>
+                            <constraint firstItem="3Fy-V0-5NJ" firstAttribute="trailing" secondItem="eVa-NP-xBg" secondAttribute="trailing" id="DRm-5q-QSz"/>
+                            <constraint firstItem="WJJ-Jt-5Bi" firstAttribute="trailing" secondItem="vRZ-eF-TWK" secondAttribute="trailing" id="EEK-1A-Eb9"/>
+                            <constraint firstItem="4dN-Xq-vNH" firstAttribute="leading" secondItem="Txu-2A-t1t" secondAttribute="leading" id="Ets-4n-an1"/>
+                            <constraint firstItem="vRZ-eF-TWK" firstAttribute="leading" secondItem="4dN-Xq-vNH" secondAttribute="leading" id="IwJ-Zd-ec0"/>
+                            <constraint firstItem="eVa-NP-xBg" firstAttribute="top" secondItem="qkf-rA-3kN" secondAttribute="bottom" constant="15" id="JHM-NX-Xit"/>
+                            <constraint firstItem="qkf-rA-3kN" firstAttribute="top" secondItem="5e2-n2-UvH" secondAttribute="top" constant="20" id="K8V-nB-xig"/>
+                            <constraint firstItem="Txu-2A-t1t" firstAttribute="top" secondItem="cfp-cM-iwy" secondAttribute="bottom" constant="15" id="LyK-5k-n2o"/>
+                            <constraint firstItem="5e2-n2-UvH" firstAttribute="trailing" secondItem="eVa-NP-xBg" secondAttribute="trailing" constant="15" id="Lzg-7t-835"/>
+                            <constraint firstItem="mMJ-27-skG" firstAttribute="top" secondItem="3Fy-V0-5NJ" secondAttribute="bottom" constant="15" id="QfC-Ka-iBp"/>
+                            <constraint firstItem="WJJ-Jt-5Bi" firstAttribute="top" secondItem="vRZ-eF-TWK" secondAttribute="bottom" constant="15" id="T7I-FV-tl2"/>
+                            <constraint firstItem="WJJ-Jt-5Bi" firstAttribute="leading" secondItem="vRZ-eF-TWK" secondAttribute="leading" id="UKS-rr-MKH"/>
+                            <constraint firstItem="mMJ-27-skG" firstAttribute="trailing" secondItem="3Fy-V0-5NJ" secondAttribute="trailing" id="Uzz-vl-yzM"/>
+                            <constraint firstItem="Icm-gU-Dt0" firstAttribute="top" secondItem="ayu-S2-4TS" secondAttribute="top" id="VHb-zE-scv"/>
+                            <constraint firstItem="ayu-S2-4TS" firstAttribute="leading" secondItem="WJJ-Jt-5Bi" secondAttribute="leading" id="WNC-bL-qew"/>
+                            <constraint firstItem="3Fy-V0-5NJ" firstAttribute="leading" secondItem="eVa-NP-xBg" secondAttribute="leading" id="Xf7-9y-Msi"/>
+                            <constraint firstItem="mMJ-27-skG" firstAttribute="leading" secondItem="3Fy-V0-5NJ" secondAttribute="leading" id="YcY-3Z-cSK"/>
+                            <constraint firstItem="Icm-gU-Dt0" firstAttribute="leading" secondItem="ayu-S2-4TS" secondAttribute="trailing" constant="10" id="aNt-nd-MOh"/>
+                            <constraint firstItem="eVa-NP-xBg" firstAttribute="leading" secondItem="5e2-n2-UvH" secondAttribute="leading" constant="15" id="dD4-yZ-iWb"/>
+                            <constraint firstItem="vRZ-eF-TWK" firstAttribute="trailing" secondItem="4dN-Xq-vNH" secondAttribute="trailing" id="dR6-t1-5EP"/>
+                            <constraint firstItem="Txu-2A-t1t" firstAttribute="leading" secondItem="cfp-cM-iwy" secondAttribute="leading" id="dzv-n3-7oH"/>
+                            <constraint firstItem="qkf-rA-3kN" firstAttribute="centerX" secondItem="4BK-O9-t34" secondAttribute="centerX" id="ibE-s4-laV"/>
+                            <constraint firstItem="cfp-cM-iwy" firstAttribute="trailing" secondItem="mMJ-27-skG" secondAttribute="trailing" id="l7m-AG-dvS"/>
+                            <constraint firstItem="5e2-n2-UvH" firstAttribute="trailing" secondItem="Icm-gU-Dt0" secondAttribute="trailing" constant="15" id="nbo-Y0-66N"/>
+                            <constraint firstItem="4dN-Xq-vNH" firstAttribute="top" secondItem="Txu-2A-t1t" secondAttribute="bottom" constant="15" id="qmW-R0-ovi"/>
+                            <constraint firstItem="3Fy-V0-5NJ" firstAttribute="top" secondItem="eVa-NP-xBg" secondAttribute="bottom" constant="15" id="sGM-8H-UuS"/>
+                            <constraint firstItem="Txu-2A-t1t" firstAttribute="trailing" secondItem="cfp-cM-iwy" secondAttribute="trailing" id="tcX-18-Xz8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5e2-n2-UvH"/>
                     </view>
+                    <connections>
+                        <outlet property="appointmentID" destination="eVa-NP-xBg" id="0bo-nK-Uci"/>
+                        <outlet property="costPerHour" destination="4dN-Xq-vNH" id="wdz-H0-56o"/>
+                        <outlet property="customerName" destination="3Fy-V0-5NJ" id="p8n-2G-R3A"/>
+                        <outlet property="date" destination="cfp-cM-iwy" id="y9g-o3-0Gi"/>
+                        <outlet property="jobDuration" destination="vRZ-eF-TWK" id="jV4-n1-9uz"/>
+                        <outlet property="ratingBar" destination="Icm-gU-Dt0" id="IPT-s6-Cwh"/>
+                        <outlet property="time" destination="Txu-2A-t1t" id="yfU-V0-3Il"/>
+                        <outlet property="totalBill" destination="WJJ-Jt-5Bi" id="lz4-t6-A6X"/>
+                        <outlet property="typeOfWork" destination="mMJ-27-skG" id="kSn-RI-2Pr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIa-PE-jbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="-2540"/>
+            <point key="canvasLocation" x="1557.5999999999999" y="-2540.7796101949029"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h4z-3f-N12">
@@ -601,21 +738,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSl-SC-HoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2391.1999999999998" y="-912.5937031484259"/>
-        </scene>
-        <!--Past Appointment Single View Controller-->
-        <scene sceneID="Mre-3X-LWk">
-            <objects>
-                <viewController id="PEb-9J-7rB" customClass="PastAppointmentSingleViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="He5-Ie-DJL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="lJc-Dp-WKA"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ExB-oR-2TM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2378" y="-1579"/>
         </scene>
         <!--Profile Settings View Controller-->
         <scene sceneID="66q-g5-0XM">
@@ -965,7 +1087,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebE-2o-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228" y="-2141.3793103448279"/>
+            <point key="canvasLocation" x="5081" y="-2301"/>
         </scene>
         <!--Request Single View Controller-->
         <scene sceneID="5Lp-NL-lRu">
@@ -1190,7 +1312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHE-mJ-lhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553" y="-2275"/>
+            <point key="canvasLocation" x="2575" y="-2432"/>
         </scene>
     </scenes>
     <resources>

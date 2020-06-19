@@ -71,13 +71,14 @@ class PastAppointmentViewController: UIViewController {
                 guard let time = data["Time"] as? String else {return}
                 guard let duration = data["JobDuration"] as? String else {return}
                 guard let bill = data["TotalBill"] as? String else {return}
-                //guard let customerId = data["CustomerId"] as? String else {return}
-                
+                guard let customerId = data["CustomerId"] as? String else {return}
+                guard let handymanId = data["HandymanId"] as? String else {return}
+                guard let customerRating = data["CustomerRating"] as? Double else {fatalError("error occured")}
                                 
                 
                 let key = k
                 
-                let appointmentData = PastAppointments(date: date, time: time, duration: duration, appointmentKey: key, bill: bill)
+                let appointmentData = PastAppointments(date: date, time: time, duration: duration, appointmentKey: key, bill: bill, rating: customerRating, customerId: customerId, handymanId: handymanId)
                 
                 self.pastAppointmentData.append(appointmentData)
                 DispatchQueue.main.async {
@@ -132,19 +133,21 @@ extension PastAppointmentViewController: UITableViewDelegate, UITableViewDataSou
             tableView.deselectRow(at: indexPath, animated: true)
         }
     
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            let destinationVC = segue.destination as! PastAppointmentSingleViewController
-//
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let index = requestsData[indexPath.row]
-//                destinationVC.selectedRequest = index.requestKey
-//                destinationVC.date = index.date
-//                destinationVC.time = index.time
-//                destinationVC.duration = index.duration
-//                destinationVC.customerId = index.customerId
-//                destinationVC.latitude = index.customerLocation.latitude
-//                destinationVC.longitude = index.customerLocation.longitude
-//            }
-//        }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destinationVC = segue.destination as! PastAppointmentSingleViewController
+
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let index = pastAppointmentData[indexPath.row]
+                
+                destinationVC.appointID = index.appointmentKey
+                destinationVC.dateLbl = index.date
+                destinationVC.timeLbl = index.time
+                destinationVC.jobDurationLbl = index.duration
+                destinationVC.totalBillLbl = index.bill
+                destinationVC.customerId = index.customerId
+                destinationVC.handymanId = index.handymanId
+                destinationVC.rating = index.rating
+            }
+        }
     
 }

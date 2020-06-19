@@ -1,4 +1,5 @@
 PODS:
+  - Cosmos (22.1.0)
   - Firebase/Auth (6.23.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.5.2)
@@ -78,6 +79,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
+  - Cosmos (~> 22.1)
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
@@ -88,6 +90,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Cosmos
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -109,6 +112,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   Firebase: 585ae467b3edda6a5444e788fda6888f024d8d6f
   FirebaseAuth: e50319ecc114acf93c2b9581e15d6604ddd7eeb2
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
@@ -129,6 +133,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: aa5bcd2b53859d5522e9b5aca6313f93daeb35ee
+PODFILE CHECKSUM: c0fc1eedc74d4bee61c6e746f281263de0bc2a17
 
 COCOAPODS: 1.9.1

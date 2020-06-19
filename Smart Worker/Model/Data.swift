@@ -46,10 +46,11 @@ struct PastAppointments {
     let date: String
     let time: String
     let duration: String
-    //let workType: String
     let appointmentKey: String
     let bill: String
-    
+    let rating: Double
+    let customerId: String
+    let handymanId: String
 }
 
 

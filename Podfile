@@ -14,5 +14,6 @@ target 'Smart Worker' do
   pod 'GeoFire', '~> 4.0'
   pod 'Kingfisher', '~> 5.14'
   pod 'Firebase/Storage'
+  pod 'Cosmos', '~> 22.1'
 
 end
