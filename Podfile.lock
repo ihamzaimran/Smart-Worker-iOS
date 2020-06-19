@@ -71,6 +71,23 @@ PODS:
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
   - leveldb-library (1.22)
+  - MaterialComponents/ActivityIndicator (93.3.0):
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+    - MotionAnimator (~> 2.0)
+  - "MaterialComponents/ActivityIndicator+ColorThemer (93.3.0)":
+    - MaterialComponents/ActivityIndicator
+    - MaterialComponents/schemes/Color
+  - MaterialComponents/Palettes (93.3.0)
+  - MaterialComponents/private/Application (93.3.0)
+  - MaterialComponents/private/Color (93.3.0)
+  - MaterialComponents/schemes/Color (93.3.0):
+    - MaterialComponents/private/Color
+  - MDFInternationalization (2.0.0)
+  - MotionAnimator (2.8.1):
+    - MotionInterchange (~> 1.6)
+  - MotionInterchange (1.6.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
@@ -87,6 +104,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - Kingfisher (~> 5.14)
+  - "MaterialComponents/ActivityIndicator+ColorThemer"
 
 SPEC REPOS:
   trunk:
@@ -108,6 +126,10 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Kingfisher
     - leveldb-library
+    - MaterialComponents
+    - MDFInternationalization
+    - MotionAnimator
+    - MotionInterchange
     - nanopb
     - PromisesObjC
 
@@ -130,9 +152,13 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MaterialComponents: 6b2eb24aa0c1d1a6453f05a6bbe3ed6c80843161
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
+  MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: c0fc1eedc74d4bee61c6e746f281263de0bc2a17
+PODFILE CHECKSUM: 0905eec42ed71382f13bc68a52c1bec514ee8bfe
 
 COCOAPODS: 1.9.1

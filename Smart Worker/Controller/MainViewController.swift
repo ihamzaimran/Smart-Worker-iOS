@@ -42,10 +42,9 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         navigationItem.hidesBackButton = true
         DispatchQueue.main.async {
-            self.showSpinner(with: "Please wait...")
-            
+            self.showSpinner(with: "Please wait...", from: self)
         }
-        //hiding the main menu if the user is not verified by the admin
+        //hiding the main menu if the user is not verified by the adminself
         self.navigationItem.leftBarButtonItem = nil
         switchBtnLabel.isHidden = true
         
@@ -90,7 +89,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             checkLocationAuthorization()
             
         } else {
-            showAlert(title: "Important", messsage: "Please turn on your location services")
+           Alert.showAlert(title: "Important", message: "Please turn on your location services", from: self)
         }
     }
     
@@ -101,11 +100,11 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         case .authorizedWhenInUse:
             print("Location Status is OK")
         case .denied:
-            showAlert(title: "Important", messsage: "Please give access to location so you can get requests for work!")
+            Alert.showAlert(title: "Important", message: "Please give access to location so you can get requests for work!", from: self)
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            showAlert(title: "Important", messsage: "Please turn on location for this Smart Worker!")
+            Alert.showAlert(title: "Important", message: "Please turn on location for this Smart Worker!", from: self)
             break
         case .authorizedAlways:
             break
@@ -125,14 +124,14 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.navigationItem.leftBarButtonItem = self.mainMenuBtn
             self.switchBtnLabel.isHidden = false
             DispatchQueue.main.async {
-                self.removeSpinner()
+                self.removeSpinner(from: self)
             }
             
         } else {
             DispatchQueue.main.async {
-                self.removeSpinner()
+                self.removeSpinner(from: self)
             }
-            showAlert(title: "Important", messsage: "Once your request is approved by admin, you can start using our services. Thank you!")
+            Alert.showAlert(title: "Important", message: "Once your request is approved by admin, you can start using our services. Thank you!", from: self)
         }
     }
     

@@ -25,21 +25,21 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBAction func resetBtnPressed(_ sender: UIButton) {
         
         DispatchQueue.main.async {
-            self.showSpinner(with: "Sending email...")
+            self.showSpinner(with: "Sending email...", from: self)
         }
         
         if let email = forgotPasswordLabel.text{
             Auth.auth().sendPasswordReset(withEmail: email) { (error) in
                 if let e = error {
                     DispatchQueue.main.async {
-                        self.removeSpinner()
-                        self.showAlert(title: "Error", messsage: e.localizedDescription)
+                        self.removeSpinner(from: self)
+                        Alert.showAlert(title: "Error", message: e.localizedDescription, from: self)
                     }
                     
                 } else {
                     DispatchQueue.main.async {
-                        self.removeSpinner()
-                        self.showAlert(title: "Forgot Password", messsage: "Email sent successfully!")
+                        self.removeSpinner(from: self)
+                        Alert.showAlert(title: "Forgot Password", message: "Email sent successfully!", from: self)
                         self.forgotPasswordLabel.text = nil
                     }
                 }

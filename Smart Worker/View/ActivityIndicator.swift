@@ -8,11 +8,11 @@
 
 import UIKit
 
-fileprivate var aView: UIView?
+//fileprivate var aView: UIView?
 
 extension UIViewController {
     
-    func showSpinner(with Messasge: String) {
+    func showSpinner(with Messasge: String, from controller: UIViewController) {
 //        aView = UIView(frame: self.view.bounds)
 //        aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
 //        let ai = UIActivityIndicatorView(style: .large)
@@ -31,13 +31,15 @@ extension UIViewController {
         loadingIndicator.startAnimating()
         
         alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
+        controller.present(alert, animated: true, completion: nil)
         
     }
     
-    func removeSpinner(){
+    func removeSpinner(from controller: UIViewController){
 //        aView?.removeFromSuperview()
 //        aView = nil
-        dismiss(animated: true, completion: nil)
+    
+        
+        controller.dismiss(animated: true, completion: nil)
     }
 }

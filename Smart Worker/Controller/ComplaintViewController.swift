@@ -69,15 +69,15 @@ class ComplaintViewController: UIViewController {
                 
                 complainRef.child(complaintID).updateChildValues(complaint)
                 
-                showAlert(title: "Alert", messsage: "We've registered your complaint. Once reviewed you will be contacted.")
+                Alert.showAlert(title: "Success", message: "We've registered your complaint. Once reviewed you will be contacted.", from: self)
                 
                 complaintText.text = nil
                 
             } else {
-                showAlert(title: "Important", messsage: "Please enter your complaint")
+                Alert.showAlert(title: "Important", message: "Please enter your complaint", from: self)
             }
         } else {
-            showAlert(title: "Important", messsage: "Please enter your complaint")
+            Alert.showAlert(title: "Important", message: "Please enter your complaint", from: self)
         }
     }
 }

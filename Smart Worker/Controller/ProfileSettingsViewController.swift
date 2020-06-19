@@ -140,7 +140,7 @@ class ProfileSettingsViewController: UIViewController{
     @IBAction func saveChangesBtn(_ sender: UIButton) {
         
         DispatchQueue.main.async {
-            self.showSpinner(with: "Saving Changes...")
+            self.showSpinner(with: "Saving Changes...", from: self)
         }
         
         if let fname = firstName.text, let lname = lastName.text, let skillChange = selectedSkill {
@@ -152,13 +152,13 @@ class ProfileSettingsViewController: UIViewController{
             ref.updateChildValues(changes) { (error, ref) in
                 if let e = error {
                     DispatchQueue.main.async {
-                        self.removeSpinner()
-                        self.showAlert(title: "Error", messsage: e.localizedDescription)
+                       self.removeSpinner(from: self)
+                        Alert.showAlert(title: "Error", message: e.localizedDescription, from: self)
                     }
                 } else {
                     DispatchQueue.main.async {
-                        self.removeSpinner()
-                        self.showAlert(title: "Success", messsage: "Changes saved successfully")
+                        self.removeSpinner(from: self)
+                        Alert.showAlert(title: "Success", message: "Changes saved successfully", from: self)
                     }
                 }
             }
@@ -174,12 +174,12 @@ class ProfileSettingsViewController: UIViewController{
     @IBAction func updatePhotoBtn(_ sender: UIButton) {
         
         DispatchQueue.main.async {
-            self.showSpinner(with: "Updating photo...")
+            self.showSpinner(with: "Updating photo...", from: self)
         }
         
         guard let uiimage = image, let data = uiimage.jpegData(compressionQuality: 0.8) else {
-            removeSpinner()
-            showAlert(title: "Error", messsage: "Something went wrong")
+            removeSpinner(from: self)
+            Alert.showAlert(title: "Error", message: "Something went wrong", from: self)
             return
         }
         
@@ -188,21 +188,21 @@ class ProfileSettingsViewController: UIViewController{
         
         storageRef.putData(data, metadata: nil) { (metadata, error) in
             if let e = error {
-                self.removeSpinner()
-                self.showAlert(title: "Error", messsage: e.localizedDescription)
+                self.removeSpinner(from: self)
+                Alert.showAlert(title: "Error", message: e.localizedDescription, from: self)
                 return
             }
             
             self.storageRef.downloadURL { (url, erro) in
                 if let e = error {
-                    self.removeSpinner()
-                    self.showAlert(title: "Error", messsage: e.localizedDescription)
+                    self.removeSpinner(from: self)
+                    Alert.showAlert(title: "Error", message: e.localizedDescription, from: self)
                     return
                 }
                 
                 guard let url = url else {
-                    self.removeSpinner()
-                    self.showAlert(title: "Error", messsage: "Something went wrong")
+                    self.removeSpinner(from: self)
+                    Alert.showAlert(title: "Error", message: "Something went wrong", from: self)
                     return
                 }
                 
@@ -212,13 +212,13 @@ class ProfileSettingsViewController: UIViewController{
                 
                 self.ref.updateChildValues(photo) { (error, ref) in
                     if let e = error {
-                        self.removeSpinner()
-                        self.showAlert(title: "Error", messsage: e.localizedDescription)
+                        self.removeSpinner(from: self)
+                        Alert.showAlert(title: "Error", message: e.localizedDescription, from: self)
                         return
                     }
-                    self.removeSpinner()
+                    self.removeSpinner(from: self)
                     self.updatePhoto.isHidden = true
-                    self.showAlert(title: "Success", messsage: "Profile Photo successfully updated!")
+                    Alert.showAlert(title: "Success", message: "Profile Photo successfully updated!", from: self)
                     
                 }
             }

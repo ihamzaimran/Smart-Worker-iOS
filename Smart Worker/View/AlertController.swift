@@ -9,20 +9,17 @@
 import UIKit
 
 
-extension UIViewController {
-    
-    
-    func showAlert(title: String, messsage: String){
+struct Alert {
+    static func showAlert(title: String?, message: String, from controller: UIViewController){
         
-        let alert = UIAlertController(title: title , message: messsage, preferredStyle: .alert)
+        let alert = UIAlertController(title: title , message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (acttion) in
-            DispatchQueue.main.async {
-                alert.dismiss(animated: true, completion: nil)
-            }
-        }))
+        let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+            print("OK")
+        }
         
-        present(alert, animated: true)
+        alert.addAction(okAction)
+        
+        controller.present(alert, animated: true)
     }
-    
 }

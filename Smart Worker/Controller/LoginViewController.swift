@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import MaterialComponents.MaterialActivityIndicator_ColorThemer
+
 
 class LoginViewController: UIViewController {
     
@@ -15,6 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     let whiteColor = UIColor.white
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,31 +48,48 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
-        DispatchQueue.main.async {
-            self.showSpinner(with: "Logging in...")
-        }
+//        DispatchQueue.main.async {
+//            self.showSpinner(with: "Logging in...")
+//        }
+        
+        
+        
+        showSpinner(with: "Logging in..." , from: self)
+//        let activityIndicator = MDCActivityIndicator()
+//        activityIndicator.sizeToFit()
+//        view.addSubview(activityIndicator)
+//
+//        // To make the activity indicator appear:
+//        activityIndicator.startAnimating()
+//
+//        // To make the activity indicator disappear:
+//
+//
+//        let colorScheme = MDCSemanticColorScheme()
+//
+//        MDCActivityIndicatorColorThemer.applySemanticColorScheme(colorScheme, to: activityIndicator)
+        
+        //showSpinner(with: "Logging in...")
+        
         if let email = emailTextField.text, let password = passwordTextField.text{
             
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 
                 if let e = error {
-                    DispatchQueue.main.async {
-                        self.removeSpinner()
-                    }
-                    let alert = UIAlertController(title: "Error" , message: e.localizedDescription, preferredStyle: .alert)
+//                    DispatchQueue.main.async {
+//                        self.removeSpinner()
+//                    }
                     
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (acttion) in
-                        DispatchQueue.main.async {
-                            alert.dismiss(animated: true, completion: nil)
-                        }
-                    }))
-                    
-                    self.present(alert, animated: true)
+                    self.removeSpinner(from: self)
+//                   activityIndicator.stopAnimating()
+                    Alert.showAlert(title: "Login Failed", message: e.localizedDescription, from: self)
                     
                 } else {
-                    DispatchQueue.main.async {
-                        self.removeSpinner()
-                    }
+//                    DispatchQueue.main.async {
+//                        self.removeSpinner()
+//                    }
+                    
+//                    activityIndicator.stopAnimating()
                     self.performSegue(withIdentifier: "loginToMain", sender: self)
                 }
             }
