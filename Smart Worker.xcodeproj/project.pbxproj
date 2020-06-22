@@ -13,6 +13,7 @@
 		811616BC2476FB52008DC573 /* NotificatiosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811616BA2476FB52008DC573 /* NotificatiosCell.xib */; };
 		8154C7E124743FB5008ADEEE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154C7E024743FB5008ADEEE /* Data.swift */; };
 		81C20C34246470AD000AA283 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 81C20C33246470AD000AA283 /* style.json */; };
+		81C92F6D24A0A99B005B6789 /* FutureAppointmentSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C92F6C24A0A99B005B6789 /* FutureAppointmentSingleViewController.swift */; };
 		81CFB99C2497A7FA0028E1AC /* PastAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB99B2497A7FA0028E1AC /* PastAppointmentViewController.swift */; };
 		81CFB99E2497A82B0028E1AC /* PresentAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB99D2497A82B0028E1AC /* PresentAppointmentsViewController.swift */; };
 		81CFB9A02497A83F0028E1AC /* FutureAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB99F2497A83F0028E1AC /* FutureAppointmentsViewController.swift */; };
@@ -48,6 +49,7 @@
 		811616BA2476FB52008DC573 /* NotificatiosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificatiosCell.xib; sourceTree = "<group>"; };
 		8154C7E024743FB5008ADEEE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		81C20C33246470AD000AA283 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = style.json; path = "Smart Worker/View/style.json"; sourceTree = SOURCE_ROOT; };
+		81C92F6C24A0A99B005B6789 /* FutureAppointmentSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureAppointmentSingleViewController.swift; sourceTree = "<group>"; };
 		81CFB99B2497A7FA0028E1AC /* PastAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastAppointmentViewController.swift; sourceTree = "<group>"; };
 		81CFB99D2497A82B0028E1AC /* PresentAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAppointmentsViewController.swift; sourceTree = "<group>"; };
 		81CFB99F2497A83F0028E1AC /* FutureAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureAppointmentsViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				81E65B61249B40F900C43322 /* PresentRequestTableViewCell.swift */,
 				81FC41F7249BB53D00B16F5D /* PastRequestTableViewCell.swift */,
 				81FC41F9249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift */,
+				81C92F6C24A0A99B005B6789 /* FutureAppointmentSingleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				81CFB9A22497AD570028E1AC /* FutureAppointmentsTableViewCell.swift in Sources */,
 				81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */,
 				81CFB9A02497A83F0028E1AC /* FutureAppointmentsViewController.swift in Sources */,
+				81C92F6D24A0A99B005B6789 /* FutureAppointmentSingleViewController.swift in Sources */,
 				811616B82476F6D7008DC573 /* NotificationsViewController.swift in Sources */,
 				81FC41F8249BB53D00B16F5D /* PastRequestTableViewCell.swift in Sources */,
 				81E65B62249B40F900C43322 /* PresentRequestTableViewCell.swift in Sources */,

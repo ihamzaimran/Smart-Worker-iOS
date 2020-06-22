@@ -8,17 +8,15 @@
 
 import UIKit
 import Firebase
-import MaterialComponents.MaterialActivityIndicator_ColorThemer
 
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginBtnLbl: UIButton!
     
     let whiteColor = UIColor.white
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +37,9 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        
+        loginBtnLbl.setTitle("Login", for: .normal)
+        loginBtnLbl.isEnabled = true
     }
     
     
@@ -48,48 +49,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
-//        DispatchQueue.main.async {
-//            self.showSpinner(with: "Logging in...")
-//        }
         
-        
-        
-        showSpinner(with: "Logging in..." , from: self)
-//        let activityIndicator = MDCActivityIndicator()
-//        activityIndicator.sizeToFit()
-//        view.addSubview(activityIndicator)
-//
-//        // To make the activity indicator appear:
-//        activityIndicator.startAnimating()
-//
-//        // To make the activity indicator disappear:
-//
-//
-//        let colorScheme = MDCSemanticColorScheme()
-//
-//        MDCActivityIndicatorColorThemer.applySemanticColorScheme(colorScheme, to: activityIndicator)
-        
-        //showSpinner(with: "Logging in...")
+        loginBtnLbl.setTitle("Logging in...", for: .normal)
+        loginBtnLbl.isEnabled = false
         
         if let email = emailTextField.text, let password = passwordTextField.text{
             
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 
                 if let e = error {
-//                    DispatchQueue.main.async {
-//                        self.removeSpinner()
-//                    }
-                    
-                    self.removeSpinner(from: self)
-//                   activityIndicator.stopAnimating()
                     Alert.showAlert(title: "Login Failed", message: e.localizedDescription, from: self)
-                    
+                    self.loginBtnLbl.isEnabled = true
+                    self.loginBtnLbl.setTitle("Login", for: .normal)
                 } else {
-//                    DispatchQueue.main.async {
-//                        self.removeSpinner()
-//                    }
-                    
-//                    activityIndicator.stopAnimating()
                     self.performSegue(withIdentifier: "loginToMain", sender: self)
                 }
             }

@@ -40,17 +40,11 @@ class PastAppointmentSingleViewController: UIViewController {
         super.viewDidLoad()
         
         getCustomerName()
-        getHandymanWorkType()
-        
+        getHandymanWorkType {
+            self.setAppointmentDetails()
+        }
     }
     
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        setAppointmentDetails()
-    }
     
     func getCustomerName() {
         if let id = customerId {
@@ -69,7 +63,7 @@ class PastAppointmentSingleViewController: UIViewController {
     }
     
     
-    func getHandymanWorkType() {
+    func getHandymanWorkType(_ completion: @escaping () -> Void) {
         if let id = handymanId {
             let ref = Database.database().reference().child("Users").child("Handyman").child(id)
             
@@ -80,6 +74,8 @@ class PastAppointmentSingleViewController: UIViewController {
                     
                     self.workType = work
                     self.perHour = costPerHour
+                    
+                    completion()
                 }
             }
         }

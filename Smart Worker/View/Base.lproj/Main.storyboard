@@ -148,6 +148,7 @@
                     <navigationItem key="navigationItem" id="2Va-SG-uKa"/>
                     <connections>
                         <outlet property="emailTextField" destination="8qB-oY-M3k" id="IU1-d9-Cxu"/>
+                        <outlet property="loginBtnLbl" destination="jU2-qS-uCH" id="2Zx-An-JUq"/>
                         <outlet property="passwordTextField" destination="47r-Gl-PxM" id="64f-e9-a3d"/>
                         <segue destination="6Ju-vX-SAr" kind="show" identifier="loginToMain" id="yi6-3b-Boa"/>
                     </connections>
@@ -570,7 +571,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="futureAppointmentCells" rowHeight="120" id="MIR-yS-wkt" customClass="FutureAppointmentsTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="futureAppointmentCells" rowHeight="120" id="MIR-yS-wkt" customClass="FutureAppointmentsTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIR-yS-wkt" id="aAQ-qu-YGO">
@@ -642,11 +643,12 @@
                     <tabBarItem key="tabBarItem" title="Future Appointments" id="mZl-Rz-XRH"/>
                     <connections>
                         <outlet property="tableView" destination="fr0-WI-fCM" id="7It-sH-RvX"/>
+                        <segue destination="yWb-ui-khd" kind="show" identifier="futureSingleViewController" id="ArF-nU-VGv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoP-Sb-NXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661.5999999999999" y="-818.14092953523243"/>
+            <point key="canvasLocation" x="1674" y="-718"/>
         </scene>
         <!--Present Appointments-->
         <scene sceneID="JoF-vp-YQH">
@@ -661,7 +663,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="presentAppointmentCells" rowHeight="120" id="pEN-nR-rec" customClass="PresentRequestTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="presentAppointmentCells" rowHeight="120" id="pEN-nR-rec" customClass="PresentRequestTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEN-nR-rec" id="zQq-QC-7Yv">
@@ -737,7 +739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSl-SC-HoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2391.1999999999998" y="-912.5937031484259"/>
+            <point key="canvasLocation" x="2430" y="-1233"/>
         </scene>
         <!--Profile Settings View Controller-->
         <scene sceneID="66q-g5-0XM">
@@ -993,7 +995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eD-vi-vks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3184.8000000000002" y="-1370.4647676161919"/>
+            <point key="canvasLocation" x="4028" y="-1450"/>
         </scene>
         <!--Request View Controller-->
         <scene sceneID="Osc-5r-L61">
@@ -1241,7 +1243,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pastAppointmentCells" rowHeight="120" id="1TQ-cN-P5p" userLabel="pastAppointmentCells" customClass="PastRequestTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="pastAppointmentCells" rowHeight="120" id="1TQ-cN-P5p" userLabel="pastAppointmentCells" customClass="PastRequestTableViewCell" customModule="Smart_Worker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1TQ-cN-P5p" id="Vdw-FL-i3y">
@@ -1313,6 +1315,129 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHE-mJ-lhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2575" y="-2432"/>
+        </scene>
+        <!--Future Appointment Single View Controller-->
+        <scene sceneID="YRy-Kj-1lJ">
+            <objects>
+                <viewController id="yWb-ui-khd" customClass="FutureAppointmentSingleViewController" customModule="Smart_Worker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22x-lR-w4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="qoo-cx-LRo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh6-JN-NOc" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onk-yg-l2g">
+                                        <rect key="frame" x="0.0" y="417" width="375" height="250"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WHV-ei-xF6">
+                                                <rect key="frame" x="15" y="15" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="hmX-mF-DyZ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="r6W-p9-jYK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juw-rl-F6W">
+                                                <rect key="frame" x="125" y="15" width="235" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKT-3g-TCf">
+                                                <rect key="frame" x="125" y="53.5" width="235" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="cIY-Wv-Zyb">
+                                                <rect key="frame" x="125" y="92" width="235" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPh-5l-5MR">
+                                                <rect key="frame" x="125" y="130.5" width="235" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsI-4X-AHI">
+                                                <rect key="frame" x="5" y="195" width="365" height="50"/>
+                                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ylT-XW-3fL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Cancel Appointment">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelBtnPressed:" destination="yWb-ui-khd" eventType="touchUpInside" id="nhX-8E-TML"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="juw-rl-F6W" secondAttribute="trailing" constant="15" id="2kw-z8-ci9"/>
+                                            <constraint firstAttribute="height" constant="250" id="3VM-Yr-nNn"/>
+                                            <constraint firstItem="IPh-5l-5MR" firstAttribute="leading" secondItem="cIY-Wv-Zyb" secondAttribute="leading" id="3dD-tn-Uhw"/>
+                                            <constraint firstItem="WHV-ei-xF6" firstAttribute="top" secondItem="Onk-yg-l2g" secondAttribute="top" constant="15" id="Anl-ku-RNP"/>
+                                            <constraint firstItem="mKT-3g-TCf" firstAttribute="trailing" secondItem="juw-rl-F6W" secondAttribute="trailing" id="BkW-mZ-rS1"/>
+                                            <constraint firstAttribute="bottom" secondItem="TsI-4X-AHI" secondAttribute="bottom" constant="5" id="NfQ-Ue-P5M"/>
+                                            <constraint firstItem="WHV-ei-xF6" firstAttribute="leading" secondItem="Onk-yg-l2g" secondAttribute="leading" constant="15" id="Ogz-I3-fMS"/>
+                                            <constraint firstItem="cIY-Wv-Zyb" firstAttribute="top" secondItem="mKT-3g-TCf" secondAttribute="bottom" constant="15" id="P86-8M-hCP"/>
+                                            <constraint firstItem="TsI-4X-AHI" firstAttribute="leading" secondItem="Onk-yg-l2g" secondAttribute="leading" constant="5" id="Rig-Jm-FYH"/>
+                                            <constraint firstItem="mKT-3g-TCf" firstAttribute="leading" secondItem="juw-rl-F6W" secondAttribute="leading" id="Syn-Cg-qYg"/>
+                                            <constraint firstAttribute="trailing" secondItem="TsI-4X-AHI" secondAttribute="trailing" constant="5" id="aMb-d3-Wv9"/>
+                                            <constraint firstItem="juw-rl-F6W" firstAttribute="top" secondItem="WHV-ei-xF6" secondAttribute="top" id="fgq-8h-Oqh"/>
+                                            <constraint firstItem="IPh-5l-5MR" firstAttribute="top" secondItem="cIY-Wv-Zyb" secondAttribute="bottom" constant="15" id="fj8-3b-Ovl"/>
+                                            <constraint firstItem="cIY-Wv-Zyb" firstAttribute="trailing" secondItem="juw-rl-F6W" secondAttribute="trailing" id="gtH-1t-OfN"/>
+                                            <constraint firstItem="IPh-5l-5MR" firstAttribute="trailing" secondItem="cIY-Wv-Zyb" secondAttribute="trailing" id="icn-do-B0x"/>
+                                            <constraint firstItem="mKT-3g-TCf" firstAttribute="top" secondItem="juw-rl-F6W" secondAttribute="bottom" constant="15" id="rYr-QD-Zla"/>
+                                            <constraint firstItem="juw-rl-F6W" firstAttribute="leading" secondItem="WHV-ei-xF6" secondAttribute="trailing" constant="10" id="riC-5J-Rww"/>
+                                            <constraint firstItem="cIY-Wv-Zyb" firstAttribute="leading" secondItem="juw-rl-F6W" secondAttribute="leading" id="x5G-sd-BV3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SIa-Th-QkP" firstAttribute="trailing" secondItem="Mh6-JN-NOc" secondAttribute="trailing" id="JQo-sw-4Sk"/>
+                                    <constraint firstItem="Onk-yg-l2g" firstAttribute="bottom" secondItem="SIa-Th-QkP" secondAttribute="bottom" id="JbR-9D-1eh"/>
+                                    <constraint firstItem="Mh6-JN-NOc" firstAttribute="top" secondItem="SIa-Th-QkP" secondAttribute="top" id="NuM-Ig-9qn"/>
+                                    <constraint firstItem="SIa-Th-QkP" firstAttribute="bottom" secondItem="Mh6-JN-NOc" secondAttribute="bottom" id="ZlN-HK-MGc"/>
+                                    <constraint firstItem="Onk-yg-l2g" firstAttribute="trailing" secondItem="SIa-Th-QkP" secondAttribute="trailing" id="Zuc-nj-nBT"/>
+                                    <constraint firstItem="Onk-yg-l2g" firstAttribute="leading" secondItem="SIa-Th-QkP" secondAttribute="leading" id="l43-Yr-iWl"/>
+                                    <constraint firstItem="Mh6-JN-NOc" firstAttribute="leading" secondItem="SIa-Th-QkP" secondAttribute="leading" id="xgv-2Z-h8L"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="SIa-Th-QkP"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jcI-1Z-TsK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uNU-Hh-C8e"/>
+                    <connections>
+                        <outlet property="dateLbl" destination="cIY-Wv-Zyb" id="mH8-a8-PiI"/>
+                        <outlet property="mapView" destination="Mh6-JN-NOc" id="gY6-Mg-DOE"/>
+                        <outlet property="nameLbl" destination="juw-rl-F6W" id="pWd-mF-Yj0"/>
+                        <outlet property="phoneLbl" destination="mKT-3g-TCf" id="DCO-qQ-MdV"/>
+                        <outlet property="profileImage" destination="WHV-ei-xF6" id="TVi-dG-ofQ"/>
+                        <outlet property="timeLbl" destination="IPh-5l-5MR" id="44L-u2-lzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufE-e9-8h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2706" y="-536"/>
         </scene>
     </scenes>
     <resources>

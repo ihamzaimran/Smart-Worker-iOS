@@ -15,6 +15,5 @@ target 'Smart Worker' do
   pod 'Kingfisher', '~> 5.14'
   pod 'Firebase/Storage'
   pod 'Cosmos', '~> 22.1'
-  pod 'MaterialComponents/ActivityIndicator+ColorThemer'
 
 end

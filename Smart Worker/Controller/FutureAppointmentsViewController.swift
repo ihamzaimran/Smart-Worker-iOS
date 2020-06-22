@@ -44,10 +44,9 @@ class FutureAppointmentsViewController: UIViewController {
     
     
     func getRequetsKey() {
-        
         ref.observe(.value) { (snapshot) in
             if snapshot.exists() {
-                
+                 
                 self.futureRequests = []
                 
                 for child in snapshot.children {
@@ -62,34 +61,30 @@ class FutureAppointmentsViewController: UIViewController {
     
     
     func showRequests(k: String) {
-        
+      
         let ref = Database.database().reference().child("FutureAppointments").child(k)
         
         ref.observe(.value) { (snapshot) in
-            
-            
+      
             if let data = snapshot.value as? [String: Any] {
                 guard let date = data["Date"] as? String else {return}
                 guard let time = data["Time"] as? String else {return}
-                guard let duration = data["JobDuration"] as? String else {return}
-                //guard let customerId = data["CustomerId"] as? String else {return}
-                
-                //                 guard let customerLocation = data["CustomerLocation"] as? [String: Any] else {fatalError("couldnot get location")}
-                //
-                //                 guard let latitude = customerLocation["Latitude"] as? String else {fatalError("couldnot get lat")}
-                //                 guard let longitude = customerLocation["Longitude"] as? String else {fatalError("couldnot get long")}
-                
+                guard let customerId = data["CustomerId"] as? String else {return}
+                guard let customerLocation = data["CustomerLocation"] as? [String: Any] else {fatalError("couldn't get location")}
+
+                guard let latitude = customerLocation["lat"] as? String else {fatalError("couldnot get latitude")}
+                guard let longitude = customerLocation["lng"] as? String else {fatalError("couldnot get longitude")}
                 
                 let key = k
                 
-                let newRequest = FutureRequests(date: date, time: time, duration: duration, requestKey: key)
+                let newRequest = FutureRequests(date: date, time: time, customerLocation: FutureLocation.init(latitude: latitude, longitude: longitude), requestKey: key, customerId: customerId)
                 
                 self.futureRequests.append(newRequest)
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-            }
+            } 
         }
     }
     
@@ -132,25 +127,24 @@ extension FutureAppointmentsViewController: UITableViewDelegate, UITableViewData
     }
     
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
-    //        performSegue(withIdentifier: "requestSinglePage", sender: self)
-    //        tableView.deselectRow(at: indexPath, animated: true)
-    //    }
-    //
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let destinationVC = segue.destination as! RequestSingleViewController
-    //
-    //        if let indexPath = tableView.indexPathForSelectedRow {
-    //            let index = requestsData[indexPath.row]
-    //            destinationVC.selectedRequest = index.requestKey
-    //            destinationVC.date = index.date
-    //            destinationVC.time = index.time
-    //            destinationVC.duration = index.duration
-    //            destinationVC.customerId = index.customerId
-    //            destinationVC.latitude = index.customerLocation.latitude
-    //            destinationVC.longitude = index.customerLocation.longitude
-    //        }
-    //    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "futureSingleViewController", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destinationVC = segue.destination as! FutureAppointmentSingleViewController
+    
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let index = futureRequests[indexPath.row]
+                destinationVC.selectedRequest = index.requestKey
+                destinationVC.date = index.date
+                destinationVC.time = index.time
+                destinationVC.customerId = index.customerId
+                destinationVC.latitude = index.customerLocation.latitude
+                destinationVC.longitude = index.customerLocation.longitude
+            }
+        }
     
 }

@@ -41,9 +41,6 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-        DispatchQueue.main.async {
-            self.showSpinner(with: "Please wait...", from: self)
-        }
         //hiding the main menu if the user is not verified by the adminself
         self.navigationItem.leftBarButtonItem = nil
         switchBtnLabel.isHidden = true
@@ -123,14 +120,8 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             self.navigationItem.leftBarButtonItem = self.mainMenuBtn
             self.switchBtnLabel.isHidden = false
-            DispatchQueue.main.async {
-                self.removeSpinner(from: self)
-            }
-            
+           
         } else {
-            DispatchQueue.main.async {
-                self.removeSpinner(from: self)
-            }
             Alert.showAlert(title: "Important", message: "Once your request is approved by admin, you can start using our services. Thank you!", from: self)
         }
     }
