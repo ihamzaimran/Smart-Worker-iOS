@@ -34,10 +34,9 @@ struct FutureRequests {
 struct PresentRequests {
     let date: String
     let time: String
-    //let duration: String
     let requestKey: String
-//    let customerId: String
-//    let customerLocation: Location
+    let customerId: String
+    let handymanId: String
 }
 
 
@@ -71,6 +70,12 @@ struct CustomerData {
     let imageUrl: String
 }
 
+
+struct PresentCustomerData {
+    let firstName: String
+    let lastName: String
+    let imageUrl: String
+}
 
 struct FutureCustomerData {
     let firstName: String

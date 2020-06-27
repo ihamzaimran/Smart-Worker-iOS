@@ -21,6 +21,7 @@
 		81CFF01024632E0500DADF3B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */; };
 		81CFF01624633A0D00DADF3B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */; };
 		81CFF0182463401900DADF3B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */; };
+		81D70A7E24A757440025012F /* PresentSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D70A7D24A757440025012F /* PresentSingleViewController.swift */; };
 		81D852812482754500E73B4C /* RequestCustomViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D852802482754500E73B4C /* RequestCustomViewCellTableViewCell.swift */; };
 		81D852832482991B00E73B4C /* RequestSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D852822482991B00E73B4C /* RequestSingleViewController.swift */; };
 		81E5BA7A2460950900F71FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5BA792460950900F71FDB /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 		81CFF00F24632E0400DADF3B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		81CFF01524633A0D00DADF3B /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = SOURCE_ROOT; };
 		81CFF0172463401900DADF3B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		81D70A7D24A757440025012F /* PresentSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleViewController.swift; sourceTree = "<group>"; };
 		81D852802482754500E73B4C /* RequestCustomViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCustomViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		81D852822482991B00E73B4C /* RequestSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSingleViewController.swift; sourceTree = "<group>"; };
 		81E5BA762460950900F71FDB /* Smart Worker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Worker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				81FC41F7249BB53D00B16F5D /* PastRequestTableViewCell.swift */,
 				81FC41F9249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift */,
 				81C92F6C24A0A99B005B6789 /* FutureAppointmentSingleViewController.swift */,
+				81D70A7D24A757440025012F /* PresentSingleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				81EA7C892467236C00DF57C0 /* ComplaintViewController.swift in Sources */,
 				81E5BA7E2460950900F71FDB /* LoginViewController.swift in Sources */,
 				81D852832482991B00E73B4C /* RequestSingleViewController.swift in Sources */,
+				81D70A7E24A757440025012F /* PresentSingleViewController.swift in Sources */,
 				81FC41FA249BBD0E00B16F5D /* PastAppointmentSingleViewController.swift in Sources */,
 				81F36E1124811C5C00376EB8 /* RequestViewController.swift in Sources */,
 				81D852812482754500E73B4C /* RequestCustomViewCellTableViewCell.swift in Sources */,

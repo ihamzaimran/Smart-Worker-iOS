@@ -71,18 +71,13 @@ class PresentAppointmentsViewController: UIViewController {
             if let data = snapshot.value as? [String: Any] {
                 guard let date = data["Date"] as? String else {return}
                 guard let time = data["Time"] as? String else {return}
-                //guard let duration = data["JobDuration"] as? String else {return}
-                //guard let customerId = data["CustomerId"] as? String else {return}
-                
-                //                 guard let customerLocation = data["CustomerLocation"] as? [String: Any] else {fatalError("couldnot get location")}
-                //
-                //                 guard let latitude = customerLocation["Latitude"] as? String else {fatalError("couldnot get lat")}
-                //                 guard let longitude = customerLocation["Longitude"] as? String else {fatalError("couldnot get long")}
-                
+                guard let customerId = data["CustomerId"] as? String else {return}
+                guard let handymanId = data["HandymanId"] as? String else {return}
+               
                 
                 let key = k
                 
-                let newRequest = PresentRequests(date: date, time: time, requestKey: key)
+                let newRequest = PresentRequests(date: date, time: time, requestKey: key, customerId: customerId, handymanId: handymanId)
                 
                 self.presentRequestsData.append(newRequest)
                 
@@ -132,25 +127,21 @@ extension PresentAppointmentsViewController: UITableViewDelegate, UITableViewDat
     }
     
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
-    //        performSegue(withIdentifier: "requestSinglePage", sender: self)
-    //        tableView.deselectRow(at: indexPath, animated: true)
-    //    }
-    //
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let destinationVC = segue.destination as! RequestSingleViewController
-    //
-    //        if let indexPath = tableView.indexPathForSelectedRow {
-    //            let index = requestsData[indexPath.row]
-    //            destinationVC.selectedRequest = index.requestKey
-    //            destinationVC.date = index.date
-    //            destinationVC.time = index.time
-    //            destinationVC.duration = index.duration
-    //            destinationVC.customerId = index.customerId
-    //            destinationVC.latitude = index.customerLocation.latitude
-    //            destinationVC.longitude = index.customerLocation.longitude
-    //        }
-    //    }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+            performSegue(withIdentifier: "presentSingleView", sender: self)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destinationVC = segue.destination as! PresentSingleViewController
+
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let index = presentRequestsData[indexPath.row]
+                destinationVC.selectedRequest = index.requestKey
+                destinationVC.customerId = index.customerId
+                destinationVC.handymanId = index.handymanId
+            }
+        }
     
 }

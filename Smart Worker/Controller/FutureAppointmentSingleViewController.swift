@@ -60,7 +60,6 @@ class FutureAppointmentSingleViewController: UIViewController {
             ref.observeSingleEvent(of: .value) { (snapshot) in
                 if let data = snapshot.value as? [String: Any] {
 
-                    print(data)
                     guard let firstName = data["FirstName"] as? String else {return}
                     guard let lastName = data["LastName"] as? String else {return}
                     guard let phoneNumber = data["PhoneNumber"] as? String else {return}
@@ -79,7 +78,6 @@ class FutureAppointmentSingleViewController: UIViewController {
     
     func setLocationOnMap() {
         
-        print("Ok")
         var lat, lng: Double
         
         if let lati = latitude, let longi = longitude {
@@ -103,8 +101,6 @@ class FutureAppointmentSingleViewController: UIViewController {
     
     
     func setDateNtime() {
-        
-        print("OK???")
         
         if let dat = date, let tim = time {
             nameLbl.text = "Name: \(customerData[0].firstName) \(customerData[0].lastName)"
